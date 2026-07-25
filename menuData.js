@@ -2,10 +2,12 @@ const menuData = [
     {
         "categorie": "Entrées",
         "plats": [
+            { "type": "titre", "nom": "Entrées" },
             { "nom": "Foie gras Maison", "desc": "& toast de pain noir", "prix": "9.90€" },
             { "nom": "Profiteroles salés aux herbes", "desc": "Glace au lard fumé, sauce chèvre", "prix": "9.00€" },
             { "nom": "Salade de riz au thon cru et légumes*", "desc": "", "prix": "6.50€" },
             { "nom": "Pois chiche à l'oriental et chorizo*", "desc": "", "prix": "6.50€" },
+            { "type": "titre", "nom": "Planches à Partager" },
             { "nom": "Planche Ardéchoise", "desc": "Caillette, jambon cru, chèvre, jambon blanc aux herbes, rösti, tomate, pain", "prix": "26.00€" },
             { "nom": "Planche des régions", "desc": "Foie gras, fromage pané, mignon fumé, chorizo grillé, houmous, tomate, pain", "prix": "29.50€" }
         ]
@@ -13,25 +15,23 @@ const menuData = [
     {
         "categorie": "Plats",
         "plats": [
+            { "type": "titre", "nom": "Viandes & Poissons" },
             { "nom": "Truite d'Ardèche farcie", "desc": "à la brousse de la laiterie Carrier", "prix": "23.00€" },
             { "nom": "Entrecôte de bœuf Simmental", "desc": "à la Plancha env 200g", "prix": "23.00€" },
             { "nom": "Ribs de porc, BBQ Frites", "desc": "env 300g", "prix": "19.90€" },
             { "nom": "Gratin Ardéchois de caillette", "desc": "et pommes de terre, salade", "prix": "18.00€" },
             { "nom": "Joue de bœuf montée en Burger", "desc": "galette, fromage, sauce BBQ", "prix": "19.50€" },
+            { "nom": "Suggestion : Plat du jour", "desc": "Demandez à notre équipe", "prix": "Ardoise" },
+            { "type": "titre", "nom": "Grandes Salades" },
             { "nom": "Salade Saveur Périgord", "desc": "Foie gras, magret fumé, gésiers confits...", "prix": "23.00€" },
             { "nom": "Salade Fermière", "desc": "Chèvre rôti, jambon cru, œuf, poulet pané...", "prix": "20.50€" },
             { "nom": "Salade Italienne", "desc": "Tomate, torti au pesto, boule mozzarella...", "prix": "18.90€" }
         ]
     },
     {
-        "categorie": "Suggestions",
-        "plats": [
-            { "nom": "Plat du jour", "desc": "Demandez à notre équipe", "prix": "Ardoise" }
-        ]
-    },
-    {
         "categorie": "Desserts",
         "plats": [
+            { "type": "titre", "nom": "Desserts" },
             { "nom": "Profiteroles Maison", "desc": "Glace vanille, chocolat chaud", "prix": "9.00€" },
             { "nom": "Tiramisu à la myrtille", "desc": "", "prix": "6.90€" },
             { "nom": "Fondant au chocolat noir 72%", "desc": "", "prix": "6.90€" },
@@ -39,13 +39,95 @@ const menuData = [
             { "nom": "Assiette de fromages", "desc": "Chèvre, bleu, maroilles", "prix": "8.00€" },
             { "nom": "Irish coffee Gourmand", "desc": "4 douceurs en accompagnement", "prix": "11.00€" },
             { "nom": "Café Gourmand", "desc": "4 douceurs en accompagnement", "prix": "9.00€" },
-            { "nom": "Glaces Terre adélice", "desc": "Parfums variés", "prix": "Sur place" }
+            { "type": "titre", "nom": "Glaces Terre Adélice" },
+            { "nom": "Coupes", "desc": "1 boule : 3.30 € | 2 boules : 6.00 € | 3 boules : 8.50 €", "prix": "" },
+            { "nom": "Parfums au choix", "desc": "Basilic, Café, Caramel crème salée, Cerise griotte, Châtaignes, Chocolat noir Morin, Citron, Fraise, Lait de brebis aux marrons confits, Menthe feuilles, Myrtilles, Noisettes, Vanille, Verveine.", "prix": "" },
+            { "nom": "Suppléments glaces", "desc": "Chantilly, Coulis, Sauces", "prix": "1.50€" },
+            { "type": "titre", "nom": "Compositions Glacées" },
+            { "nom": "L'Ardéchoise", "desc": "1 boule vanille, 1 boule châtaigne, crème de marron, chantilly", "prix": "9.00€" },
+            { "nom": "Café Ardéchois", "desc": "1 boule café, 1 boule lait de brebis/marrons, 2cl Kahlua, chantilly", "prix": "9.00€" },
+            { "nom": "Monts d'Ardèche", "desc": "1 boule myrtille, 1 boule châtaigne, 2cl Elixir Coiron", "prix": "9.00€" },
+            { "nom": "Colonel", "desc": "2 boules citron, 2cl vodka, citron fruit", "prix": "9.00€" },
+            { "nom": "Cherry d'Amour", "desc": "1 boule cerise, 1 boule chocolat, 2cl crème de cerise", "prix": "9.00€" }
         ]
     },
     {
-        "categorie": "Boissons",
+        "categorie": "Softs & Boissons chaudes",
         "plats": [
-            { "nom": "Verre de Vin", "desc": "Rouge, Blanc, Rosé", "prix": "4.50€" }
+            { "type": "titre", "nom": "Les Softs" },
+            { "nom": "Vittel", "desc": "25cl", "prix": "2.90€" },
+            { "nom": "Vittel / Vals", "desc": "Vittel 50cl / Vals 33cl", "prix": "3.50€" },
+            { "nom": "Vittel / Vals", "desc": "Vittel 100cl / Vals 75cl", "prix": "4.50€" },
+            { "nom": "Coca / Coca zéro", "desc": "33cl", "prix": "4.20€" },
+            { "nom": "Schweppes Tonic / Agrumes", "desc": "25cl", "prix": "4.40€" },
+            { "nom": "Orangina / Oasis / Sprite / Fuzetea", "desc": "33cl", "prix": "4.40€" },
+            { "nom": "Jus de fruits Granini", "desc": "25cl (Abricot, Pomme, Fraise, Ananas, Tomate)", "prix": "4.50€" },
+            { "nom": "Diabolo", "desc": "25cl (Fraise, Grenadine, Menthe, Pac citron, Orgeat, Anis, Pêche)", "prix": "3.90€" },
+            { "nom": "Sirop à l'eau", "desc": "25cl", "prix": "2.50€" },
+            { "nom": "Reine des Basaltes", "desc": "100cl", "prix": "5.00€" },
+            { "nom": "Redbull", "desc": "25cl", "prix": "5.35€" },
+            { "type": "titre", "nom": "Boissons Chaudes" },
+            { "nom": "Expresso / Ristretto", "desc": "", "prix": "2.10€" },
+            { "nom": "Double café", "desc": "", "prix": "4.00€" },
+            { "nom": "Crème / Noisette / Allongé / Déca", "desc": "", "prix": "2.50€" },
+            { "nom": "Double crème", "desc": "", "prix": "4.20€" },
+            { "nom": "Thés / Infusions", "desc": "", "prix": "3.00€" },
+            { "nom": "Irish Coffee", "desc": "", "prix": "8.50€" }
+        ]
+    },
+    {
+        "categorie": "Bières & Cave à vin",
+        "plats": [
+            { "type": "titre", "nom": "Apéritifs" },
+            { "nom": "Ricard / Pastis 51", "desc": "2cl", "prix": "2.00€" },
+            { "nom": "Kir pétillant Prosecco", "desc": "Cassis / Pêche / Châtaigne - 12cl", "prix": "7.00€" },
+            { "nom": "Kir", "desc": "Cassis / Pêche / Châtaigne", "prix": "6.00€" },
+            { "nom": "Porto", "desc": "Rouge / Blanc - 8cl", "prix": "6.00€" },
+            { "nom": "Martini / Noilly Prat / Campari", "desc": "4cl", "prix": "6.00€" },
+            { "type": "titre", "nom": "Les Bières" },
+            { "nom": "FADA Blonde (Pression)", "desc": "25cl : 3.90 € | 33cl : 5.10 € | 50cl : 7.50 €", "prix": "" },
+            { "nom": "FADA du Moment (Pression)", "desc": "25cl : 4.20 € | 33cl : 5.40 € | 50cl : 7.90 €", "prix": "" },
+            { "nom": "Picon bière", "desc": "25cl", "prix": "4.20€" },
+            { "nom": "Panaché bière", "desc": "25cl", "prix": "4.20€" },
+            { "nom": "Fada triple", "desc": "Bouteille 33cl", "prix": "7.00€" },
+            { "nom": "Duvel", "desc": "Bouteille 33cl", "prix": "6.80€" },
+            { "nom": "Maredsous", "desc": "Bouteille 33cl", "prix": "5.80€" },
+            { "nom": "Desperados", "desc": "Bouteille 33cl", "prix": "5.80€" },
+            { "nom": "Jupiler sans alcool", "desc": "Bouteille 25cl", "prix": "3.70€" },
+            { "type": "titre", "nom": "Les Bulles" },
+            { "nom": "Prosecco", "desc": "Verre 12cl : 6.00 € | Bouteille 75cl : 23.00 €", "prix": "" },
+            { "nom": "Champagne Chassenay 1ère cuvée", "desc": "Verre 12cl : 8.00 € | Bouteille 75cl : 45.00 €", "prix": "" },
+            { "nom": "Chassenay Blanc de Blanc", "desc": "Bouteille 75cl", "prix": "65.00€" },
+            { "nom": "Canard Duchenne Brut", "desc": "Bouteille 75cl", "prix": "55.00€" },
+            { "type": "titre", "nom": "Vins Blancs" },
+            { "nom": "Vigier Chardonnay (IGP Ardèche)", "desc": "50cl", "prix": "14.50€" },
+            { "nom": "Latour Chardonnay (IGP Ardèche)", "desc": "75cl", "prix": "25.00€" },
+            { "nom": "Grangeon Sauvignon (IGP Ardèche)", "desc": "75cl", "prix": "21.50€" },
+            { "nom": "Moelleux Gros Manseng (IGP C. de Gascogne)", "desc": "75cl", "prix": "25.00€" },
+            { "nom": "Vin au verre Chardonnay (Caves Vivaraises)", "desc": "12cl", "prix": "3.50€" },
+            { "type": "titre", "nom": "Vins Rosés" },
+            { "nom": "Vigier gris de grenache (IGP Ardèche)", "desc": "50cl", "prix": "14.50€" },
+            { "nom": "Domaine Les Terriers (IGP Ardèche)", "desc": "75cl", "prix": "23.00€" },
+            { "nom": "Cht Puech Haut Argali (AOP Languedoc)", "desc": "75cl", "prix": "35.00€" },
+            { "nom": "G. Bertrand Gris blanc (IGP Oc)", "desc": "75cl", "prix": "28.50€" },
+            { "nom": "Isula bio (AOP Corse)", "desc": "75cl", "prix": "19.90€" },
+            { "nom": "Vin au verre Gris grenache (Caves Vivaraises)", "desc": "12cl", "prix": "3.50€" },
+            { "type": "titre", "nom": "Vins Rouges" },
+            { "nom": "Domaine du Colombier (IGP Ardèche)", "desc": "50cl", "prix": "16.50€" },
+            { "nom": "Les Terriers 100% Merlot (IGP Ardèche)", "desc": "75cl", "prix": "23.00€" },
+            { "nom": "Chapoutier Belleruche (AOP Côtes du Rhône)", "desc": "75cl", "prix": "28.50€" },
+            { "nom": "Dom des bosquets Gigondas (CDR Villages)", "desc": "75cl", "prix": "36.00€" },
+            { "nom": "Chapoutier Deschants (St Joseph AOP C.D.R)", "desc": "75cl", "prix": "45.00€" },
+            { "nom": "Vin au verre Merlot (Caves Vivaraises)", "desc": "12cl", "prix": "3.50€" },
+            { "nom": "Vins du moment au verre", "desc": "Demandez la liste des vins (12cl)", "prix": "Ardoise" },
+            { "type": "titre", "nom": "Alcools Forts & Digestifs" },
+            { "nom": "Whisky Ballantines", "desc": "4cl", "prix": "5.50€" },
+            { "nom": "Whisky Glenfiddich 12 ans", "desc": "4cl", "prix": "6.50€" },
+            { "nom": "Captain Morgan / Vodka Smirnoff", "desc": "4cl", "prix": "5.50€" },
+            { "nom": "Get 27 / Get 31 / Limoncello", "desc": "4cl", "prix": "5.50€" },
+            { "nom": "Rhum Bumbu / Cognac VSOP", "desc": "4cl", "prix": "7.00€" },
+            { "nom": "Cognac XO / Rhum vieille réserve XO", "desc": "4cl", "prix": "9.00€" },
+            { "nom": "Elixir Coiron / Génépi / Verveine", "desc": "4cl", "prix": "6.50€" }
         ]
     }
 ];

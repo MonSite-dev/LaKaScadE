@@ -89,3 +89,29 @@ body { font-family: var(--font-body); color: var(--primary-dark); background-col
 .map-container { height: 400px; border-radius: 12px; overflow: hidden; box-shadow: 0 15px 40px rgba(35, 66, 72, 0.15); }
 
 footer { background-color: #1a3136; color: rgba(235, 222, 212, 0.7); text-align: center; padding: 30px 0; font-size: 0.9rem; }
+
+/* Style pour les petits logos sur la carte (FADA, Terre Adélice) */
+.logo-carte {
+    height: 24px; /* Hauteur du logo, à ajuster selon tes préférences */
+    vertical-align: middle;
+    margin-right: 8px;
+    margin-bottom: 3px;
+}
+/* --- DESIGN DES SÉPARATEURS DE CATÉGORIES --- */
+.separateur-categorie {
+    grid-column: 1 / -1; /* Indispensable : force le titre à prendre toute la largeur de la grille */
+    text-align: center;
+    margin: 3.5rem 0 1.5rem 0; /* Espacement aéré (au dessus et en dessous) */
+    padding-bottom: 10px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2); /* Ligne discrète et élégante */
+    width: 100%;
+}
+
+.separateur-categorie h2 {
+    font-size: 1.6rem;
+    color: #e0ca9e; /* Couleur dorée modifiable */
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-weight: 400;
+    margin: 0;
+}
