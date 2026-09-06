@@ -1,89 +1,36 @@
-function renderMenu(filterCategory) {
-    const container = document.getElementById('menu-container');
-    
-    // Animation de fondu (disparition)
-    container.style.opacity = 0;
-    
-    setTimeout(() => {
-        container.innerHTML = '';
-        const grid = document.createElement('div');
-        grid.className = 'menu-grid';
+document.addEventListener("DOMContentLoaded", () => {
+    const menuContainer = document.getElementById("menu-container");
 
-        const category = menuData.find(cat => cat.categorie === filterCategory);
-        
-        if (category) {
-            category.plats.forEach(plat => {
-                
-                // --- ON VÉRIFIE SI C'EST UN TITRE DE SÉPARATION ---
-                if (plat.type === "titre") {
-                    const titreDiv = document.createElement('div');
-                    titreDiv.className = 'separateur-categorie';
-                    titreDiv.innerHTML = `<h2>${plat.nom}</h2>`;
-                    grid.appendChild(titreDiv);
-                } 
-                // --- SINON, C'EST UN PLAT NORMAL ---
-                else {
-                    const itemDiv = document.createElement('div');
-                    itemDiv.className = 'menu-item';
-                    
-                    const headerDiv = document.createElement('div');
-                    headerDiv.className = 'menu-item-header';
-                    
-                    const nameSpan = document.createElement('span');
-                    nameSpan.className = 'menu-item-name';
-                    nameSpan.textContent = plat.nom;
-                    
-                    const priceSpan = document.createElement('span');
-                    priceSpan.className = 'menu-item-price';
-                    priceSpan.textContent = plat.prix;
-                    
-                    headerDiv.appendChild(nameSpan);
-                    headerDiv.appendChild(priceSpan);
-                    itemDiv.appendChild(headerDiv);
-                    
-                    if (plat.desc && plat.desc.trim() !== '') {
-                        const descDiv = document.createElement('div');
-                        descDiv.className = 'menu-item-desc';
-                        descDiv.textContent = plat.desc;
-                        itemDiv.appendChild(descDiv);
-                    }
-                    
-                    grid.appendChild(itemDiv);
-                }
-            });
-        }
-        
-        container.appendChild(grid);
-        // Animation de fondu (apparition)
-        container.style.opacity = 1;
-    }, 300); // Attendre 300ms pour l'effet visuel
-}
+    // Sécurité : on vérifie que la boîte du menu et les données existent bien
+    if (!menuContainer || typeof menuData === 'undefined') return;
 
-// Gérer les clics sur les boutons d'onglets
-document.querySelectorAll('.tab-btn').forEach(btn => {
-    btn.addEventListener('click', (e) => {
-        // 1. On gère l'apparence des boutons
-        document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
-        e.target.classList.add('active');
-        
-        // 2. On récupère le nom de l'onglet cliqué VIA LE DATA-FILTER
-        const categorie = e.target.getAttribute('data-filter');
-        
-        // 3. On affiche la liste des plats correspondants
-        renderMenu(categorie);
-        
-        // 4. On cache les notes par défaut
-        document.getElementById('info-entrees').style.display = 'none';
-        document.getElementById('info-plats').style.display = 'none';
+    let htmlContent = "";
 
-        // 5. On affiche la bonne note selon le data-filter exact !
-        if (categorie === 'Entrées') {
-            document.getElementById('info-entrees').style.display = 'block';
-        } else if (categorie === 'Plats') {
-            document.getElementById('info-plats').style.display = 'block';
+    // On parcourt chaque ligne de notre fichier menuData.js
+    menuData.forEach(item => {
+        if (item.titre) {
+            // S'il s'agit d'un titre de catégorie (Séparateur)
+            htmlContent += `
+                <div class="menu-category-title" style="width: 100%; margin-top: 45px; margin-bottom: 25px; text-align: center;">
+                    <h3 style="color: #cda45e; font-size: 1.5rem; text-transform: uppercase; letter-spacing: 2px; border-bottom: 1px solid #cda45e; display: inline-block; padding-bottom: 5px;">
+                        ${item.titre}
+                    </h3>
+                </div>
+            `;
+        } else if (item.nom) {
+            // S'il s'agit d'un plat classique
+            htmlContent += `
+                <div class="menu-item" style="margin-bottom: 20px; width: 100%; max-width: 800px; margin-left: auto; margin-right: auto;">
+                    <div style="display: flex; justify-content: space-between; align-items: baseline; border-bottom: 1px dashed rgba(255, 255, 255, 0.2); padding-bottom: 5px; margin-bottom: 8px;">
+                        <h4 style="color: #ffffff; font-size: 1.1rem; margin: 0; font-family: 'Playfair Display', serif;">${item.nom}</h4>
+                        <span style="color: #cda45e; font-weight: bold; margin-left: 15px; white-space: nowrap;">${item.prix}</span>
+                    </div>
+                    <p style="color: #aaaaaa; font-size: 0.95rem; font-style: italic; margin: 0;">${item.description}</p>
+                </div>
+            `;
         }
     });
-});
 
-// Charger la première catégorie au lancement
-document.addEventListener('DOMContentLoaded', () => renderMenu('Entrées'));
+    // On injecte tout le menu généré dans la page
+    menuContainer.innerHTML = htmlContent;
+});
