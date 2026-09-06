@@ -65,7 +65,7 @@ const menuData = [
     { nom: "Gris de Grenache Caves Vivaraises*", description: "Rosé", prix: "3.50€" },
     { nom: "Merlot Caves Vivaraises*", description: "Rouge", prix: "3.50€" },
     { nom: "Prosecco", description: "Effervescent", prix: "6.00€" },
-    { nom: "Champagne - Chassenay 1ère Cuvée", description: "Effervescent", prix: "8.00€" }
+    { nom: "Champagne - Chassenay 1ère Cuvée", description: "Effervescent", prix: "8.00€" },
 
     { titre: "SOFTS & BOISSONS CHAUDES" },
     { nom: "Sirop à l'eau", description: "Fraise, Menthe, Grenadine, Citron, Pêche - 25cl", prix: "2.50€" },
@@ -79,5 +79,5 @@ const menuData = [
     { titre: "BIÈRES" },
     { nom: "Bière Pression Blonde", description: "Demi (25cl) / Pinte (50cl)", prix: "3.50€ / 6.50€" },
     { nom: "Bière Locale Artisanale", description: "Bouteille - 33cl", prix: "5.50€" },
-    { nom: "Bière d'Abbaye", description: "Bouteille - 33cl", prix: "4.50€" },
+    { nom: "Bière d'Abbaye", description: "Bouteille - 33cl", prix: "4.50€" }
 ];
