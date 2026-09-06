@@ -14,11 +14,11 @@ const menuData = [
     { nom: "CAPONATA D'AUBERGINE RÔTIE", description: "Aubergines confites à l'huile d'olive, mijotées avec tomates, feta, olives et câpres.", prix: "7.20€" },
 
     { titre: "LES PLATS" },
-    { nom: "TRUITE D'ARDÈCHE AUX AMANDES", description: "Truite entière d'Ardèche grillée au four, beurre clarifié et amandes torréfiées. (Garniture au choix)", prix: "23.00€" },
-    { nom: "ENTRECÔTE DE BŒUF SIMMENTAL À LA PLANCHA", description: "Pièce de bœuf Simmental d'environ 200g grillée à la plancha. (Garniture au choix)", prix: "23.00€" },
+    { nom: "TRUITE D'ARDÈCHE AUX AMANDES*", description: "Truite entière d'Ardèche grillée au four, beurre clarifié et amandes torréfiées. (Garniture au choix)", prix: "23.00€" },
+    { nom: "ENTRECÔTE DE BŒUF SIMMENTAL À LA PLANCHA*", description: "Pièce de bœuf Simmental d'environ 200g grillée à la plancha. (Garniture au choix)", prix: "23.00€" },
     { nom: "MACARONADE DE JOUE DE BŒUF", description: "Joue de bœuf confite dans son jus de cuisson accompagnée de penne rigate.", prix: "15.50€" },
-    { nom: "CÔTE DE COCHON PLEIN AIR", description: "Côte de porc fermier élevé en plein air : 300g à 350g avec os. (Garniture au choix)", prix: "20.50€" },
-    { nom: "SUPRÊME DE VOLAILLE RÔTI", description: "Blanc & manchon de volaille et jus de viande réduit aux herbes. (Garniture au choix)", prix: "19.00€" },
+    { nom: "CÔTE DE COCHON PLEIN AIR*", description: "Côte de porc fermier élevé en plein air : 300g à 350g avec os. (Garniture au choix)", prix: "20.50€" },
+    { nom: "SUPRÊME DE VOLAILLE RÔTI*", description: "Blanc & manchon de volaille et jus de viande réduit aux herbes. (Garniture au choix)", prix: "19.00€" },
     { nom: "SALADE FERMIÈRE", description: "Salade verte, chèvre rôti, jambon cru de pays, poulet croustillant, tomates fraiches, Grana Padano, œuf, olives, oignons frits, sauce Caesar.", prix: "23.00€" },
 
     { titre: "LES DESSERTS" },
@@ -34,5 +34,50 @@ const menuData = [
     { nom: "L'ARDÉCHOISE", description: "1 boule vanille, 1 boule châtaigne, crème de marron, chantilly.", prix: "9.00€" },
     { nom: "CAFÉ VALSOIS", description: "1 boule café, 1 boule lait de brebis/marrons, 2cl Kahlua, chantilly.", prix: "9.00€" },
     { nom: "MONTIVERNOUX", description: "1 boule myrtille, 1 boule châtaigne, 2cl Elixir Coiron.", prix: "9.00€" },
-    { nom: "COLONEL", description: "2 boules citron, 2cl vodka, citron fruit.", prix: "9.00€" }
+    { nom: "COLONEL", description: "2 boules citron, 2cl vodka, citron fruit.", prix: "9.00€" },
+
+    { titre: "CAVE À VIN - EFFERVESCENTS" },
+    { nom: "Chassenay - Brut 1ère Cuvée", description: "75cl", prix: "45.00€" },
+    { nom: "Canard-Duchêne - Brut", description: "75cl", prix: "55.00€" },
+    { nom: "Chassenay - Blanc de Blancs", description: "75cl", prix: "65.00€" },
+    { nom: "Prosecco", description: "75cl", prix: "23.00€" },
+
+    { titre: "CAVE À VIN - BLANCS" },
+    { nom: "Vigier - Chardonnay*", description: "IGP Ardèche - 50cl", prix: "14.50€" },
+    { nom: "Latour - Chardonnay*", description: "IGP Ardèche - 75cl", prix: "25.00€" },
+    { nom: "Grangeon Sauvignon*", description: "IGP Ardèche - 75cl", prix: "21.50€" },
+    { nom: "Gros Manseng - Moelleux", description: "IGP Côtes de Gascogne - 75cl", prix: "25.00€" },
+
+    { titre: "CAVE À VIN - ROSÉS" },
+    { nom: "Vigier - Gris de Grenache*", description: "IGP Ardèche - 50cl", prix: "14.50€" },
+    { nom: "Domaine Les Terriers*", description: "IGP Ardèche - 75cl", prix: "23.00€" },
+    { nom: "Isula Bio", description: "AOP Corse - 75cl", prix: "21.50€" },
+
+    { titre: "CAVE À VIN - ROUGES" },
+    { nom: "Domaine du Colombier*", description: "IGP Ardèche - 50cl", prix: "16.50€" },
+    { nom: "C.Urios Château Pépusque", description: "Minervois - 75cl", prix: "21.50€" },
+    { nom: "Guigal - Côte-Rôtie Brune et Blonde", description: "AOC Côtes du Rhône - 75cl", prix: "79.00€" },
+    { nom: "Jaboulet Parallèle 45 Bio", description: "AOP Côtes du Rhône - 75cl", prix: "23.60€" },
+    { nom: "Domaine des Bosquets - Gigondas", description: "Côtes du Rhône Villages - 75cl", prix: "36.00€" },
+
+    { titre: "CAVE À VIN - AU VERRE (12cl)" },
+    { nom: "Chardonnay - Caves Vivaraises*", description: "Blanc", prix: "3.50€" },
+    { nom: "Gris de Grenache Caves Vivaraises*", description: "Rosé", prix: "3.50€" },
+    { nom: "Merlot Caves Vivaraises*", description: "Rouge", prix: "3.50€" },
+    { nom: "Prosecco", description: "Effervescent", prix: "6.00€" },
+    { nom: "Champagne - Chassenay 1ère Cuvée", description: "Effervescent", prix: "8.00€" }
+
+    { titre: "SOFTS & BOISSONS CHAUDES" },
+    { nom: "Sirop à l'eau", description: "Fraise, Menthe, Grenadine, Citron, Pêche - 25cl", prix: "2.50€" },
+    { nom: "Limonade Pression", description: "25cl", prix: "3.00€" },
+    { nom: "Coca-Cola / Zéro", description: "33cl", prix: "3.50€" },
+    { nom: "Jus de fruits", description: "Orange, Pomme, Ananas, Tomate - 25cl", prix: "3.50€" },
+    { nom: "Café Expresso", description: "Assemblage 100% Arabica", prix: "1.50€" },
+    { nom: "Grand Café / Double", description: "", prix: "3.00€" },
+    { nom: "Thé & Infusions", description: "Sélection de thés noirs, verts et infusions bio", prix: "3.50€" },
+
+    { titre: "BIÈRES" },
+    { nom: "Bière Pression Blonde", description: "Demi (25cl) / Pinte (50cl)", prix: "3.50€ / 6.50€" },
+    { nom: "Bière Locale Artisanale", description: "Bouteille - 33cl", prix: "5.50€" },
+    { nom: "Bière d'Abbaye", description: "Bouteille - 33cl", prix: "4.50€" },
 ];
