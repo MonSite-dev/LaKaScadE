@@ -134,3 +134,62 @@ footer { background-color: #1a251e; color: rgba(244, 241, 234, 0.6); text-align:
     .floating-bar { width: 95%; bottom: 15px; padding: 6px; justify-content: space-between; }
     .float-item { font-size: 0.75rem; padding: 12px 8px; letter-spacing: 0px; }
 }
+
+/* ========================================= */
+/* 📱 OPTIMISATIONS POUR TÉLÉPHONES MOBILES  */
+/* ========================================= */
+
+/* 1. Bloquer définitivement la marge blanche à droite */
+html, body {
+    overflow-x: hidden !important;
+    max-width: 100vw !important;
+    width: 100%;
+}
+
+@media (max-width: 768px) {
+    /* 2. Réduire la taille du logo sur la page d'accueil */
+    .main-logo {
+        max-width: 85% !important; /* Force le logo à tenir dans l'écran */
+        height: auto;
+        margin-top: 0;
+    }
+
+    /* 3. Réduire la taille des grands titres ("Ce qu'ils disent de nous") */
+    .section-title {
+        font-size: 2.2rem !important;
+        line-height: 1.2;
+        word-wrap: break-word; /* Empêche les mots longs de casser la page */
+    }
+
+    /* 4. Réduire l'espace vide autour des sections */
+    .section {
+        padding: 60px 15px !important;
+    }
+
+    /* 5. Adapter les cartes des avis (elles étaient plus larges que l'écran !) */
+    .reviews-track .review-card {
+        width: 280px !important; /* Passe sur tous les petits téléphones */
+        padding: 20px !important;
+        margin: 0 10px !important;
+        font-size: 0.95rem !important;
+        white-space: normal;
+    }
+
+    /* 6. Adapter les photos culinaires du carrousel */
+    .photos-track img {
+        width: 180px !important;
+        height: 240px !important;
+        margin: 0 8px !important;
+    }
+    
+    /* 7. Ajuster la barre flottante de réservation */
+    .floating-bar {
+        width: 95% !important;
+        bottom: 15px !important;
+        padding: 8px !important;
+    }
+    .float-item {
+        font-size: 0.8rem !important;
+        padding: 10px 15px !important;
+    }
+}
