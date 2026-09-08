@@ -46,7 +46,7 @@ body { font-family: var(--font-body); color: var(--primary-dark); background-col
 .btn-outline:hover { background-color: var(--primary-light); color: var(--primary-dark); }
 
 .hero {
-    height: 100vh; background-image: url('images/brasserie.png');
+    height: 100vh; background-image: url('images/histoire.png');
     background-size: cover; background-position: center 70%; position: relative; 
     display: flex; align-items: center; justify-content: center; text-align: center; color: var(--primary-light);
 }
