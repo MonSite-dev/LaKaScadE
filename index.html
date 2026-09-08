@@ -4,22 +4,36 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>La KaScadE | Brasserie Française</title>
+
+    <!-- L'ICÔNE DE L'ONGLET (FAVICON) -->
+    <link rel="icon" href="images/favicon.png" type="image/png">
+    
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-PRZZQ558');</script>
+    <!-- End Google Tag Manager -->
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Playfair+Display:ital,wght@0,500;0,700;1,500&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&family=Oswald:wght@400;500;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PRZZQ558"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
 
     <header class="hero">
         <div class="hero-overlay"></div>
         <div class="hero-content">
-            <h2 class="subtitle">Brasserie Française</h2>
-            <h1 class="title">La KaScadE</h1>
-            <div class="hero-buttons">
-                <a href="#menu" class="btn btn-primary">Voir la Carte</a>
-                <a href="#contact" class="btn btn-outline">Nous Trouver</a>
-            </div>
+            <h1 class="title" style="margin: 0;">
+                <img src="images/logo.png" alt="La KaScadE" class="main-logo">
+            </h1>
         </div>
     </header>
 
@@ -37,52 +51,127 @@
         </div>
     </section>
 
-    <!-- Section Producteurs : Cachée pour le moment. 
-         Pour l'afficher plus tard, effacez la ligne avec les flèches "<!--" et celle avec "-->" 
-    <!-- 
-    <section id="producteurs" class="section bg-light" style="padding-top: 0;">
-        <div class="container text-center">
-            <h2 class="section-title">Nos Producteurs Locaux</h2>
-            <div class="divider center"></div>
-            <p style="max-width: 600px; margin: 0 auto;">Nous travaillons main dans la main avec des artisans passionnés de notre région pour vous proposer des viandes de qualité, des fromages de caractère, et de belles découvertes viticoles et brassicoles.</p>
-        </div>
-    </section>
-    -->
-
+   <!-- MENU EN IMAGES -->
    <section id="menu" class="section bg-dark">
-        <div class="container">
-            <h2 class="section-title text-light" style="text-align: center;">La Carte</h2>
+        <div class="container text-center">
+            <h2 class="section-title text-light">La Carte</h2>
             <div class="divider center gold"></div>
             
-            <div class="menu-container" id="menu-container">
-                <!-- La totalité de ta carte va s'afficher ici automatiquement -->
+            <div class="menu-tabs">
+                <button class="tab-btn active" data-target="img-menu">Menu</button>
+                <button class="tab-btn" data-target="img-plats">Entrées & Plats</button>
+                <button class="tab-btn" data-target="img-desserts">Desserts & Glaces</button>
+                <button class="tab-btn" data-target="img-cave">Cave à Vin</button>
+                <button class="tab-btn" data-target="img-boissons">Boissons</button>
             </div>
             
+            <div class="menu-image-container">
+                <img id="img-menu" src="images/carte-menu.png" class="menu-img active" alt="Menu Spécial">
+                <img id="img-plats" src="images/carte-plats.png" class="menu-img" alt="Entrées et Plats">
+                <img id="img-desserts" src="images/carte-desserts.png" class="menu-img" alt="Desserts">
+                <img id="img-cave" src="images/carte-cave.png" class="menu-img" alt="Cave à vin">
+                <img id="img-boissons" src="images/carte-boissons.png" class="menu-img" alt="Boissons">
+            </div>
         </div>
     </section>
 
+    <!-- CARROUSEL DES PLATS -->
     <section id="galerie" class="section bg-light">
-        <div class="container">
-            <h2 class="section-title" style="text-align: center;">Notre Cuisine</h2>
+        <div class="container text-center">
+            <h2 class="section-title">Notre Cuisine</h2>
             <div class="divider center"></div>
-            <div class="mosaic-grid">
-                <img src="images/1.jpeg" style="object-fit: cover; object-position: 20%;">
-                <img src="images/2.jpeg">
-                <img src="images/3.jpeg" style="object-fit: cover; object-position: 80%;">
-                <img src="images/4.jpeg">
-		<img src="images/5.jpeg">
-		<img src="images/6.jpeg">
-		<img src="images/7.jpeg">
-		<img src="images/8.jpeg">
+        </div>
+        <div class="carousel-wrapper">
+            <div class="carousel-track photos-track">
+                <!-- Les images sont doublées pour l'effet infini -->
+                <img src="images/1.jpeg"><img src="images/2.jpeg"><img src="images/3.jpeg"><img src="images/4.jpeg">
+                <img src="images/5.jpeg"><img src="images/6.jpeg"><img src="images/7.jpeg"><img src="images/8.jpeg">
+                <!-- Copie -->
+                <img src="images/1.jpeg"><img src="images/2.jpeg"><img src="images/3.jpeg"><img src="images/4.jpeg">
+                <img src="images/5.jpeg"><img src="images/6.jpeg"><img src="images/7.jpeg"><img src="images/8.jpeg">
             </div>
         </div>
     </section>
+
+    <!-- CARROUSEL DES AVIS -->
+    <section id="avis" class="section bg-gold">
+        <div class="container text-center">
+            <h2 class="section-title text-light">Ce qu'ils disent de nous</h2>
+            <div class="divider center text-light"></div>
+        </div>
+        <div class="carousel-wrapper">
+            <div class="carousel-track reviews-track">
+                <div class="review-card">⭐⭐⭐⭐⭐<br>"Merci pour l’accueil chaleureuse, repas parfait sur la terrasse, petit verre de vin . Belle continuation" - Alice P.</div>
+                <div class="review-card">⭐⭐⭐⭐⭐<br>"Service très agréable, avec des plats originaux et très bons." - Jérémy C.</div>
+                <div class="review-card">⭐⭐⭐⭐<br>"Très bon restaurant découvert en visite début août, personnels aimables et sympathiques, un plus pour l Irish gourmand" - Jessy B.</div>
+                <div class="review-card">⭐⭐⭐⭐<br>"Excellent déjeuner à la Kascade! Tout était délicieux. Service parfait. On va reviendra avec grand plaisir." - Mollie </div>
+		<div class="review-card">⭐⭐⭐⭐<br>"Repas délicieux,très copieux,personnel très agréable, je recommande sans hésitation" - Marieange N. </div>
+                <!-- Copie pour effet infini -->
+                <div class="review-card">⭐⭐⭐⭐⭐<br>"Merci pour l’accueil chaleureuse, repas parfait sur la terrasse, petit verre de vin . Belle continuation" - Alice P.</div>
+                <div class="review-card">⭐⭐⭐⭐⭐<br>"Service très agréable, avec des plats originaux et très bons." - Jérémy C.</div>
+                <div class="review-card">⭐⭐⭐⭐<br>"Très bon restaurant découvert en visite début août, personnels aimables et sympathiques, un plus pour l Irish gourmand" - Jessy B.</div>
+                <div class="review-card">⭐⭐⭐⭐<br>"Excellent déjeuner à la Kascade! Tout était délicieux. Service parfait. On va reviendra avec grand plaisir." - Mollie </div>
+		<div class="review-card">⭐⭐⭐⭐<br>"Repas délicieux,très copieux,personnel très agréable, je recommande sans hésitation" - Marieange N. </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION AUTOUR DE LA BRASSERIE -->
+    <section id="autour" class="section bg-light">
+        <div class="container text-center">
+            <h2 class="section-title">Autour de La KaScadE</h2>
+            <div class="divider center"></div>
+            <p style="max-width: 700px; margin: 0 auto;">Profitez de votre venue pour découvrir Vals-les-Bains. Prolongez votre moment de détente aux Thermes, tentez votre chance au Casino, ou flânez dans le parc ombragé à quelques pas de notre terrasse.</p>
+        </div>
+    </section>
+
+  <!-- CARTE CADEAU
+    <section id="cadeau" class="section bg-dark">
+        <div class="container text-center text-light">
+            <h2 class="section-title text-light">Offrir un Bon Repas</h2>
+            <div class="divider center gold"></div>
+            <p style="margin-bottom: 30px;">Faites plaisir à vos proches avec une carte cadeau personnalisée.</p>
+            
+            <div data-fs-success hidden style="padding: 20px; border: 1px solid var(--accent-gold); color: var(--accent-gold); border-radius: 8px; margin: 0 auto; max-width: 600px; font-weight: bold; background: rgba(229, 193, 88, 0.1);">
+                Merci ! Votre demande a bien été envoyée. Nous vous recontacterons très vite pour valider ensemble le bon cadeau.
+            </div>
+
+            <form id="cadeau-form" class="cadeau-form" action="https://formspree.io/f/mqpkgpkl" method="POST">
+                
+                <input type="text" name="nom" placeholder="Votre Nom & Prénom *" required oninvalid="this.setCustomValidity('Veuillez renseigner votre nom pour que nous puissions vous identifier.')" oninput="this.setCustomValidity('')" data-fs-field>
+                
+                <input type="email" name="email" placeholder="Votre Email * (pour valider le bon ensemble)" required oninvalid="this.setCustomValidity('Veuillez renseigner une adresse email valide.')" oninput="this.setCustomValidity('')" data-fs-field>
+                
+                <input type="tel" name="telephone" placeholder="Votre Numéro de Téléphone (Optionnel)" data-fs-field>
+                
+                <input type="text" name="destinataire" placeholder="Nom de la ou des personnes à qui est destiné ce bon *" required oninvalid="this.setCustomValidity('Veuillez indiquer le nom du ou des destinataires.')" oninput="this.setCustomValidity('')" data-fs-field>
+                
+                <textarea name="message" rows="5" placeholder="Ex: Bonjour, nous souhaiterions offrir un repas d'une valeur de 90€ à [Noms]... *" required oninvalid="this.setCustomValidity('Veuillez préciser votre demande (montant souhaité, menu...).')" oninput="this.setCustomValidity('')" data-fs-field></textarea>
+                
+                <button type="submit" class="btn btn-primary" data-fs-submit-btn>Envoyer la demande</button>
+                <p style="font-size: 0.8rem; margin-top: 10px; color: rgba(255,255,255,0.5);">* Champs obligatoires</p>
+                
+            </form>
+        </div>
+    </section>
+
+    <script>
+        window.formspree = window.formspree || function () { (formspree.q = formspree.q || []).push(arguments); };
+        formspree('initForm', { formElement: '#cadeau-form', formId: 'mqpkgpkl' });
+    </script>
+    <script src="https://unpkg.com/@formspree/ajax@1" defer></script>
+
+    <script>
+        window.formspree = window.formspree || function () { (formspree.q = formspree.q || []).push(arguments); };
+        formspree('initForm', { formElement: '#cadeau-form', formId: 'mqpkgpkl' });
+    </script>
+    <script src="https://unpkg.com/@formspree/ajax@1" defer></script> -->
 
     <section id="contact" class="section bg-gold">
         <div class="container two-columns">
             <div class="contact-info">
-                <h2 class="section-title">Informations Pratiques</h2>
-                <div class="divider"></div>
+                <h2 class="section-title text-light">Informations Pratiques</h2>
+                <div class="divider text-light"></div>
                 <div class="info-item">
                     <h3>📍 Adresse</h3>
                     <p>7 Rue Auguste Clément<br>07600 Vals-les-Bains</p>
@@ -108,7 +197,13 @@
         </div>
     </footer>
 
-    <script src="menuData.js"></script>
+<!-- BARRE D'ACTION FLOTTANTE -->
+    <div class="floating-bar">
+        <a href="#menu" class="float-item">La Carte</a>
+        <!-- <a href="#cadeau" class="float-item">Offrir un repas</a> -->
+        <a href="#contact" class="float-item highlight">Réserver</a>
+    </div>
+
     <script src="app.js"></script>
 </body>
 </html>
