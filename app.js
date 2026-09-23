@@ -71,7 +71,6 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     }
 
-    // Lancer la vérification de l'heure
     updateRestaurantStatus();
     setInterval(updateRestaurantStatus, 60000);
 
@@ -93,20 +92,17 @@ document.addEventListener("DOMContentLoaded", function() {
 
     revealElements.forEach(el => revealOnScroll.observe(el));
 
-// 4. SYSTÈME D'ONGLETS POUR LE MENU
+    // 4. SYSTÈME D'ONGLETS POUR LE MENU
     const tabBtns = document.querySelectorAll('.tab-btn');
     const menuImgs = document.querySelectorAll('.menu-img');
 
     tabBtns.forEach(btn => {
         btn.addEventListener('click', () => {
-            // Retirer la classe active de tous les boutons et images
             tabBtns.forEach(b => b.classList.remove('active'));
             menuImgs.forEach(img => img.classList.remove('active'));
 
-            // Ajouter la classe active au bouton cliqué
             btn.classList.add('active');
 
-            // Trouver l'image correspondante et l'afficher
             const targetId = btn.getAttribute('data-target');
             const targetImg = document.getElementById(targetId);
             if(targetImg) {
@@ -114,4 +110,29 @@ document.addEventListener("DOMContentLoaded", function() {
             }
         });
     });
+
+    // 5. GESTION RGPD DES COOKIES (Le fameux cerveau !)
+    const banner = document.getElementById("cookie-banner");
+    const consent = localStorage.getItem("kascade_cookie_consent");
+
+    if (banner) {
+        if (consent === "accepted") {
+            // S'il a déjà accepté, on charge Google Analytics discrètement
+            if(typeof window.loadGTM === "function") window.loadGTM();
+        } else if (!consent) {
+            // S'il n'a fait aucun choix, on affiche la belle carte
+            banner.style.display = "block"; 
+        }
+
+        document.getElementById("btn-accept-cookies")?.addEventListener("click", function() {
+            localStorage.setItem("kascade_cookie_consent", "accepted");
+            banner.style.display = "none";
+            if(typeof window.loadGTM === "function") window.loadGTM();
+        });
+
+        document.getElementById("btn-refuse-cookies")?.addEventListener("click", function() {
+            localStorage.setItem("kascade_cookie_consent", "refused");
+            banner.style.display = "none";
+        });
+    }
 });

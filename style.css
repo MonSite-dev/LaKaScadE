@@ -400,3 +400,91 @@ html, body {
         padding: 8px 12px !important;
     }
 }
+
+/* --- BANDEAU COOKIES RGPD PREMIUM & FUN --- */
+.cookie-banner {
+    position: fixed; 
+    bottom: 30px; 
+    left: 30px; 
+    max-width: 380px;
+    background-color: var(--primary-light); 
+    color: var(--primary-dark);
+    border-radius: 12px;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.25); 
+    padding: 25px; 
+    z-index: 100000; /* Passe par-dessus la barre flottante */
+    border: 1px solid rgba(217, 108, 74, 0.2);
+}
+.cookie-content {
+    display: flex; 
+    gap: 15px; 
+    align-items: flex-start; 
+    margin-bottom: 20px;
+}
+.cookie-icon {
+    font-size: 2.5rem; 
+    line-height: 1;
+    animation: wiggle 3s infinite ease-in-out;
+}
+.cookie-title {
+    font-family: var(--font-subtitle); 
+    font-weight: 600; 
+    font-size: 1.25rem; 
+    margin-bottom: 8px; 
+    color: var(--accent-gold);
+}
+.cookie-text p {
+    font-size: 0.85rem; 
+    line-height: 1.5; 
+    opacity: 0.85;
+}
+.cookie-buttons {
+    display: flex; 
+    gap: 10px;
+}
+.btn-cookie {
+    flex: 1;
+    padding: 10px; 
+    border-radius: 6px; 
+    font-family: var(--font-title); 
+    text-transform: uppercase; 
+    font-size: 0.9rem; 
+    cursor: pointer; 
+    transition: all 0.3s ease; 
+    text-align: center;
+}
+.btn-cookie-accept {
+    background-color: var(--accent-gold); 
+    color: var(--primary-light); 
+    border: 2px solid var(--accent-gold);
+}
+.btn-cookie-accept:hover {
+    background-color: transparent; 
+    color: var(--accent-gold);
+}
+.btn-cookie-refuse {
+    background-color: transparent; 
+    color: var(--primary-dark); 
+    border: 2px solid rgba(42, 59, 50, 0.2);
+}
+.btn-cookie-refuse:hover {
+    border-color: var(--primary-dark);
+}
+
+@keyframes wiggle {
+    0%, 100% { transform: rotate(0deg); }
+    10% { transform: rotate(-10deg); }
+    20% { transform: rotate(10deg); }
+    30% { transform: rotate(0deg); }
+}
+
+/* Adaptation pour les téléphones */
+@media (max-width: 768px) {
+    .cookie-banner {
+        bottom: 0; left: 0; right: 0; 
+        max-width: 100%; 
+        border-radius: 20px 20px 0 0; /* Arrondi uniquement en haut */
+        border: none;
+        border-top: 2px solid var(--accent-gold);
+    }
+}

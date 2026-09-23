@@ -8,18 +8,42 @@
     <!-- L'ICÔNE DE L'ONGLET (FAVICON) -->
     <link rel="icon" href="images/favicon.png?v=2" type="image/png">
     
-    <!-- Google Tag Manager -->
-    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-PRZZQ558');</script>
-    <!-- End Google Tag Manager -->
+    <!-- Google Tag Manager (Désactivé par défaut pour RGPD) -->
+    <script>
+    window.loadGTM = function() {
+        (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-PRZZQ558');
+    };
+    </script>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&family=Oswald:wght@400;500;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css?v=2">
+<script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Restaurant",
+      "name": "La KaScadE",
+      "image": "https://lakascade.fr/images/Logo.png",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "7 Rue Auguste Clément",
+        "addressLocality": "Vals-les-Bains",
+        "postalCode": "07600",
+        "addressCountry": "FR"
+      },
+      "telephone": "+33667271938",
+      "openingHoursSpecification": [
+        { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Tuesday", "Thursday", "Friday", "Saturday"], "opens": "12:00", "closes": "15:00" },
+        { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"], "opens": "19:00", "closes": "22:00" },
+        { "@type": "OpeningHoursSpecification", "dayOfWeek": "Sunday", "opens": "12:00", "closes": "15:00" }
+      ]
+    }
+    </script>
 </head>
 <body>
     
@@ -245,6 +269,21 @@
             </div>
         </div>
     </footer>
+
+<!-- BANDEAU COOKIES RGPD PREMIUM & FUN -->
+<div id="cookie-banner" class="cookie-banner" style="display: none;">
+    <div class="cookie-content">
+        <div class="cookie-icon">🍪</div>
+        <div class="cookie-text">
+            <p class="cookie-title">Une histoire de cookies...</p>
+            <p>Promis, les meilleurs sont ceux de notre chef ! Ceux de ce site sont numériques et nous servent uniquement à mesurer notre audience (via Google Analytics) pour améliorer votre expérience. On vous laisse choisir !</p>
+        </div>
+    </div>
+    <div class="cookie-buttons">
+        <button id="btn-refuse-cookies" class="btn-cookie btn-cookie-refuse">Non merci</button>
+        <button id="btn-accept-cookies" class="btn-cookie btn-cookie-accept">Oui, j'accepte !</button>
+    </div>
+</div>
 
 <!-- BARRE D'ACTION FLOTTANTE PREMIUM -->
     <div class="floating-bar">
