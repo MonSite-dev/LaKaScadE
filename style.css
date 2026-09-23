@@ -52,6 +52,11 @@ body { font-family: var(--font-body); color: var(--primary-dark); background-col
 }
 .hero-overlay { position: absolute; top: 0; left: 0; right: 0; bottom: 0; background-color: rgba(42, 59, 50, 0.7); } /* Overlay vert forêt transparent */
 .hero-content { position: relative; z-index: 1; padding: 20px; }
+.main-logo {
+    width: 450px; /* Taille idéale sur ordinateur */
+    max-width: 90vw; /* Empêche de déborder sur téléphone */
+    height: auto;
+}
 
 .image-content img { width: 100%; border-radius: 8px; box-shadow: 0 20px 40px rgba(42, 59, 50, 0.15); }
 
@@ -65,9 +70,17 @@ body { font-family: var(--font-body); color: var(--primary-dark); background-col
 .tab-btn:hover { color: var(--primary-light); }
 .tab-btn.active { color: var(--accent-gold); border-bottom: 3px solid var(--accent-gold); }
 
-.menu-image-container { max-width: 800px; margin: 0 auto; text-align: center; min-height: 500px; }
-.menu-img { width: 100%; border-radius: 8px; box-shadow: 0 15px 35px rgba(0,0,0,0.3); display: none; opacity: 0; transition: opacity 0.4s ease; }
-.menu-img.active { display: block; opacity: 1; }
+.menu-image-container { 
+    max-width: 550px; /* Au lieu de 800px pour réduire la taille des cartes */
+    margin: 0 auto; text-align: center; min-height: 500px; 
+}
+.menu-img { 
+    width: 100%; border-radius: 8px; box-shadow: 0 15px 35px rgba(0,0,0,0.3); 
+    display: none; opacity: 0; transition: opacity 0.4s ease; 
+}
+.menu-img.active { 
+    display: block; opacity: 1; 
+}
 
 /* --- CARROUSELS SCROLL INFINI --- */
 .carousel-wrapper { overflow: hidden; white-space: nowrap; width: 100%; padding: 30px 0; position: relative; }
@@ -109,7 +122,12 @@ body { font-family: var(--font-body); color: var(--primary-dark); background-col
 
 .map-container { height: 420px; border-radius: 8px; overflow: hidden; box-shadow: 0 15px 40px rgba(42, 59, 50, 0.2); }
 
-footer { background-color: #1a251e; color: rgba(244, 241, 234, 0.6); text-align: center; padding: 40px 0; font-size: 0.95rem; }
+footer { 
+    background-color: #1a251e; color: rgba(244, 241, 234, 0.6); 
+    text-align: center; 
+    padding: 40px 0 100px 0; /* Les 100px dégagent l'espace pour la barre flottante */
+    font-size: 0.95rem; 
+}
 
 /* --- BARRE D'ACTION FLOTTANTE --- */
 .floating-bar {
@@ -141,27 +159,218 @@ html, body {
     width: 100%;
 }
 
+/* ========================================= */
+/* ✨ EFFETS PREMIUM & MICRO-INTERACTIONS    */
+/* ========================================= */
+
+/* Couleur de sélection du texte (Détail ultra-pro) */
+::selection {
+    background-color: var(--accent-gold);
+    color: var(--primary-light);
+}
+
+/* Écran de chargement (Rideau cinématique) */
+.preloader {
+    position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+    background-color: var(--primary-dark);
+    display: flex; justify-content: center; align-items: center;
+    z-index: 100000; /* Toujours au-dessus de tout */
+    transition: transform 0.9s cubic-bezier(0.77, 0, 0.175, 1);
+}
+.preloader.hidden {
+    transform: translateY(-100%); /* Glisse vers le haut */
+}
+.preloader-logo {
+    width: 200px;
+    animation: pulseLogo 2s infinite ease-in-out;
+}
+@keyframes pulseLogo {
+    0% { transform: scale(0.95); opacity: 0.7; }
+    50% { transform: scale(1.05); opacity: 1; }
+    100% { transform: scale(0.95); opacity: 0.7; }
+}
+
+/* Statut d'ouverture dynamique dans la barre */
+.status-indicator {
+    display: flex; align-items: center; gap: 8px;
+    padding: 0 15px; border-right: 1px solid rgba(244, 241, 234, 0.2);
+}
+.dot {
+    width: 10px; height: 10px; border-radius: 50%;
+    background-color: #4ade80; /* Vert par défaut */
+    box-shadow: 0 0 10px currentColor;
+    animation: blinkDot 2s infinite;
+}
+.status-text {
+    color: var(--primary-light); font-family: var(--font-body);
+    font-size: 0.85rem; white-space: nowrap;
+}
+@keyframes blinkDot {
+    0% { opacity: 0.4; }
+    50% { opacity: 1; }
+    100% { opacity: 0.4; }
+}
+/* ========================================= */
+/* 🎨 DESIGN PREMIUM "TASTE SKILL"           */
+/* ========================================= */
+
+/* 1. HERO CINÉMATIQUE (Slow Zoom) */
+.hero {
+    position: relative; overflow: hidden; background-image: none;
+}
+.hero-bg {
+    position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+    background-image: url('images/histoire.png?v=3');
+    background-size: cover; background-position: center 70%;
+    animation: slowZoom 25s linear infinite alternate;
+    z-index: 0;
+}
+@keyframes slowZoom {
+    0% { transform: scale(1); }
+    100% { transform: scale(1.15); }
+}
+
+/* 2. MICROCOPY & SCROLL INDICATOR */
+.microcopy {
+    font-family: var(--font-title); font-size: 0.95rem;
+    letter-spacing: 5px; color: var(--accent-gold);
+    margin-bottom: 30px; text-transform: uppercase;
+}
+.scroll-indicator {
+    width: 1px; height: 70px; background: rgba(244, 241, 234, 0.2);
+    margin: 50px auto 0; position: relative; overflow: hidden;
+}
+.scroll-indicator::after {
+    content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 50%;
+    background: var(--accent-gold);
+    animation: scrollDown 2s infinite ease-in-out;
+}
+@keyframes scrollDown {
+    0% { transform: translateY(-100%); }
+    100% { transform: translateY(200%); }
+}
+
+/* 3. STYLE ÉDITORIAL (Histoire) - Version affinée */
+.editorial-punchline {
+    font-family: var(--font-subtitle); 
+    font-style: italic; /* L'italique donne le côté "citation/magazine" */
+    font-size: 1.35rem; /* Plus petit et plus raffiné */
+    font-weight: 500;
+    line-height: 1.6; /* On aère l'espace entre les lignes */
+    color: var(--accent-gold); /* On le met en Terracotta pour le détacher du reste */
+    margin-bottom: 20px;
+    border-left: 3px solid var(--accent-gold); /* Petite ligne verticale chic */
+    padding-left: 20px; /* Espace entre la ligne et le texte */
+}
+
+/* On adoucit le texte normal juste en dessous pour maximiser le contraste */
+.text-content p[style] {
+    font-size: 1rem;
+    line-height: 1.8;
+    color: rgba(42, 59, 50, 0.8);
+}
+/* 4. MOTEUR D'ANIMATION (Scroll Reveal) */
+.reveal {
+    opacity: 0; transform: translateY(40px);
+    transition: opacity 0.9s cubic-bezier(0.25, 1, 0.5, 1), transform 0.9s cubic-bezier(0.25, 1, 0.5, 1);
+}
+.reveal.active {
+    opacity: 1; transform: translateY(0);
+}
+
+/* 5. ÉLÉGANCE DES TITRES ET ICÔNES */
+.section-title {
+    font-family: var(--font-subtitle) !important;
+    text-transform: none !important;
+    font-style: italic;
+    font-weight: 400;
+    font-size: 3rem;
+    letter-spacing: 0;
+}
+.premium-info {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+}
+.premium-info svg {
+    flex-shrink: 0;
+    color: var(--primary-light);
+    margin-top: 3px;
+}
+.social-icon {
+    color: rgba(244, 241, 234, 0.6);
+    transition: color 0.3s ease, transform 0.3s ease;
+    display: inline-block;
+}
+.social-icon:hover {
+    color: var(--accent-gold);
+    transform: translateY(-3px);
+}
+
+/* --- NOUVELLE GALERIE 8 PHOTOS (4 colonnes) --- */
+.premium-gallery {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px; max-width: 1100px; margin: 40px auto 0;
+}
+.gallery-item {
+    border-radius: 8px; overflow: hidden; aspect-ratio: 1; 
+}
+.gallery-item img {
+    width: 100%; height: 100%; object-fit: cover;
+    transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+}
+.gallery-item:hover img {
+    transform: scale(1.08); 
+}
+.item-large {
+    grid-column: span 2; grid-row: span 2; /* Prend 4 cases */
+}
+.item-wide {
+    grid-column: span 2; aspect-ratio: 2/1; /* Prend 2 cases en largeur */
+}
+
+/* --- NOUVEAUX AVIS (Flexbox pour centrer 5 éléments) --- */
+.premium-reviews {
+    display: flex; flex-wrap: wrap; justify-content: center;
+    gap: 30px; max-width: 1100px; margin: 40px auto 0;
+}
+.premium-reviews .review-card {
+    width: calc(33.333% - 20px); min-width: 300px; /* 3 par ligne max */
+    border-top: 1px solid rgba(217, 108, 74, 0.3); 
+    padding: 30px 0; color: var(--primary-light); text-align: left;
+}
+.premium-reviews .stars {
+    color: var(--accent-gold); font-size: 1.2rem; margin-bottom: 20px;
+}
+.premium-reviews .quote {
+    font-family: var(--font-subtitle); font-style: italic;
+    font-size: 1.1rem; line-height: 1.6; margin-bottom: 25px;
+}
+.premium-reviews .author {
+    font-family: var(--font-title); font-size: 0.95rem;
+    text-transform: uppercase; letter-spacing: 1px; color: rgba(244, 241, 234, 0.5);
+}
+/* ========================================= */
+/* 📱 OPTIMISATIONS POUR TÉLÉPHONES MOBILES  */
+/* ========================================= */
 @media (max-width: 768px) {
-    /* 2. Réduire la taille du logo sur la page d'accueil */
     .main-logo {
         max-width: 85% !important; 
         height: auto;
         margin-top: 0;
     }
-
-    /* 3. Réduire la taille des grands titres */
+    .status-indicator { 
+        display: none; 
+    }
     .section-title {
         font-size: 2.2rem !important;
         line-height: 1.2;
         word-wrap: break-word; 
     }
-
-    /* 4. Réduire l'espace vide autour des sections */
     .section {
         padding: 60px 15px !important;
     }
-
-    /* 5. Adapter les cartes des avis */
     .reviews-track .review-card {
         width: 280px !important; 
         padding: 20px !important;
@@ -169,15 +378,11 @@ html, body {
         font-size: 0.95rem !important;
         white-space: normal;
     }
-
-    /* 6. Adapter les photos culinaires du carrousel */
     .photos-track img {
         width: 180px !important;
         height: 240px !important;
         margin: 0 8px !important;
     }
-    
-    /* 7. Ajuster la barre flottante (Petite pilule centrée) */
     .floating-bar {
         width: max-content !important; 
         max-width: 90vw !important; 
@@ -190,4 +395,8 @@ html, body {
         font-size: 0.85rem !important;
         padding: 10px 15px !important;
     }
+.premium-gallery { grid-template-columns: repeat(2, 1fr); gap: 8px; }
+    .item-large, .item-wide { grid-column: span 1; grid-row: span 1; aspect-ratio: 1; }
+    .premium-reviews { grid-template-columns: 1fr; gap: 10px; }
+    .premium-reviews .review-card { padding: 20px 0; }
 }

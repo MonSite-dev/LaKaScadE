@@ -23,27 +23,33 @@
 </head>
 <body>
     
+<!-- ÉCRAN DE CHARGEMENT PREMIUM -->
+    <div id="preloader" class="preloader">
+        <img src="images/Logo.png" alt="La KaScadE" class="preloader-logo">
+    </div>
+
     <!-- Google Tag Manager (noscript) -->
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PRZZQ558"
     height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
 
     <header class="hero">
+        <div class="hero-bg"></div>
         <div class="hero-overlay"></div>
-        <div class="hero-content">
-            <h1 class="title" style="margin: 0;">
-                <img src="images/Logo.png" alt="La KaScadE" class="main-logo">
+        <div class="hero-content reveal">
+             <h1 class="title" style="margin: 0;">
+                <img src="images/Logo.svg" alt="La KaScadE" class="main-logo">
             </h1>
         </div>
     </header>
 
     <section id="histoire" class="section bg-light">
         <div class="container two-columns">
-            <div class="text-content">
+            <div class="text-content reveal">
                 <h2 class="section-title">Notre Histoire</h2>
                 <div class="divider"></div>
-                <p>Passionné par la cuisine française, le partage et le plaisir de bien manger, le responsable de La KaScadE souhaite faire revivre l’esprit des brasseries qu’il a connues plus jeune.</p>
-                <p>Découvrez une cuisine généreuse, authentique et accessible, portée par de bons produits et le plaisir de se retrouver autour d’une table conviviale.</p>
+                <p class="editorial-punchline">Passionné par la cuisine française, le partage et le plaisir de bien manger, le responsable de La KaScadE souhaite faire revivre l’esprit des brasseries qu’il a connues plus jeune.</p>
+                <p style="opacity: 0.8;">Découvrez une cuisine généreuse, authentique et accessible, portée par de bons produits et le plaisir de se retrouver autour d’une table conviviale.</p>
             </div>
             <div class="image-content">
                 <img src="images/histoire.png" alt="L'esprit Brasserie">
@@ -75,43 +81,59 @@
         </div>
     </section>
 
-    <!-- CARROUSEL DES PLATS -->
+   <!-- PHOTOS DES PLATS -->
     <section id="galerie" class="section bg-light">
-        <div class="container text-center">
+        <div class="container text-center reveal">
             <h2 class="section-title">Notre Cuisine</h2>
             <div class="divider center"></div>
         </div>
-        <div class="carousel-wrapper">
-            <div class="carousel-track photos-track">
-                <!-- Les images sont doublées pour l'effet infini -->
-                <img src="images/1.jpeg"><img src="images/2.jpeg"><img src="images/3.jpeg"><img src="images/4.jpeg">
-                <img src="images/5.jpeg"><img src="images/6.jpeg"><img src="images/7.jpeg"><img src="images/8.jpeg">
-                <!-- Copie -->
-                <img src="images/1.jpeg"><img src="images/2.jpeg"><img src="images/3.jpeg"><img src="images/4.jpeg">
-                <img src="images/5.jpeg"><img src="images/6.jpeg"><img src="images/7.jpeg"><img src="images/8.jpeg">
+        <div class="container">
+            <div class="premium-gallery reveal">
+                <div class="gallery-item item-large"><img src="images/1.jpeg" alt="Plat 1"></div>
+                <div class="gallery-item"><img src="images/2.jpeg" alt="Plat 2"></div>
+                <div class="gallery-item"><img src="images/3.jpeg" alt="Plat 3"></div>
+                <div class="gallery-item"><img src="images/4.jpeg" alt="Plat 4"></div>
+                <div class="gallery-item"><img src="images/5.jpeg" alt="Plat 5"></div>
+                <div class="gallery-item item-wide"><img src="images/6.jpeg" alt="Plat 6"></div>
+                <div class="gallery-item"><img src="images/7.jpeg" alt="Plat 7"></div>
+                <div class="gallery-item"><img src="images/8.jpeg" alt="Plat 8"></div>
             </div>
         </div>
     </section>
 
-    <!-- CARROUSEL DES AVIS -->
-    <section id="avis" class="section bg-gold">
-        <div class="container text-center">
+    <!-- AVIS -->
+    <section id="avis" class="section bg-dark">
+        <div class="container text-center reveal">
             <h2 class="section-title text-light">Ce qu'ils disent de nous</h2>
-            <div class="divider center text-light"></div>
+            <div class="divider center gold"></div>
         </div>
-        <div class="carousel-wrapper">
-            <div class="carousel-track reviews-track">
-                <div class="review-card">⭐⭐⭐⭐⭐<br>"Merci pour l’accueil chaleureuse, repas parfait sur la terrasse, petit verre de vin . Belle continuation" - Alice P.</div>
-                <div class="review-card">⭐⭐⭐⭐⭐<br>"Service très agréable, avec des plats originaux et très bons." - Jérémy C.</div>
-                <div class="review-card">⭐⭐⭐⭐<br>"Très bon restaurant découvert en visite début août, personnels aimables et sympathiques, un plus pour l Irish gourmand" - Jessy B.</div>
-                <div class="review-card">⭐⭐⭐⭐<br>"Excellent déjeuner à la Kascade! Tout était délicieux. Service parfait. On va reviendra avec grand plaisir." - Mollie </div>
-		<div class="review-card">⭐⭐⭐⭐<br>"Repas délicieux,très copieux,personnel très agréable, je recommande sans hésitation" - Marieange N. </div>
-                <!-- Copie pour effet infini -->
-                <div class="review-card">⭐⭐⭐⭐⭐<br>"Merci pour l’accueil chaleureuse, repas parfait sur la terrasse, petit verre de vin . Belle continuation" - Alice P.</div>
-                <div class="review-card">⭐⭐⭐⭐⭐<br>"Service très agréable, avec des plats originaux et très bons." - Jérémy C.</div>
-                <div class="review-card">⭐⭐⭐⭐<br>"Très bon restaurant découvert en visite début août, personnels aimables et sympathiques, un plus pour l Irish gourmand" - Jessy B.</div>
-                <div class="review-card">⭐⭐⭐⭐<br>"Excellent déjeuner à la Kascade! Tout était délicieux. Service parfait. On va reviendra avec grand plaisir." - Mollie </div>
-		<div class="review-card">⭐⭐⭐⭐<br>"Repas délicieux,très copieux,personnel très agréable, je recommande sans hésitation" - Marieange N. </div>
+        <div class="container">
+            <div class="premium-reviews reveal">
+                <div class="review-card">
+                    <div class="stars">★★★★★</div>
+                    <p class="quote">"Merci pour l’accueil chaleureux, repas parfait sur la terrasse, petit verre de vin. Belle continuation."</p>
+                    <p class="author">— Alice P.</p>
+                </div>
+                <div class="review-card">
+                    <div class="stars">★★★★★</div>
+                    <p class="quote">"Excellent déjeuner à la Kascade ! Tout était délicieux. Service parfait. On reviendra avec grand plaisir."</p>
+                    <p class="author">— Mollie</p>
+                </div>
+                <div class="review-card">
+                    <div class="stars">★★★★★</div>
+                    <p class="quote">"Repas délicieux, très copieux, personnel très agréable, je recommande sans hésitation."</p>
+                    <p class="author">— Marieange N.</p>
+                </div>
+                <div class="review-card">
+                    <div class="stars">★★★★★</div>
+                    <p class="quote">"Service très agréable, avec des plats originaux et très bons."</p>
+                    <p class="author">— Jérémy C.</p>
+                </div>
+                <div class="review-card">
+                    <div class="stars">★★★★★</div>
+                    <p class="quote">"Très bon restaurant découvert en visite début août, personnels aimables et sympathiques, un plus pour l'Irish gourmand."</p>
+                    <p class="author">— Jessy B.</p>
+                </div>
             </div>
         </div>
     </section>
@@ -169,23 +191,38 @@
 
     <section id="contact" class="section bg-gold">
         <div class="container two-columns">
-            <div class="contact-info">
+            <div class="contact-info reveal">
                 <h2 class="section-title text-light">Informations Pratiques</h2>
                 <div class="divider text-light"></div>
-                <div class="info-item">
-                    <h3>📍 Adresse</h3>
-                    <p>7 Rue Auguste Clément<br>07600 Vals-les-Bains</p>
+                
+                <div class="info-item premium-info">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+                    <div>
+                        <h3>Adresse</h3>
+                        <p>7 Rue Auguste Clément<br>07600 Vals-les-Bains</p>
+                    </div>
                 </div>
-                <div class="info-item">
-                    <h3>📞 Téléphone</h3>
-                    <p>06 67 27 19 38</p>
+                
+                <div class="info-item premium-info">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                    <div>
+                        <h3>Téléphone</h3>
+                        <p>06 67 27 19 38</p>
+                    </div>
                 </div>
-                <div class="info-item">
-                    <h3>🕒 Horaires</h3>
-                    <p>Ouvert du mardi au dimanche<br>Midi et Soir</p>
+                
+                <div class="info-item premium-info">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                    <div>
+                        <h3>Horaires</h3>
+                        <p><strong>Mar, Jeu, Ven, Sam :</strong> 12h-15h & 19h-22h<br>
+                        <strong>Mercredi :</strong> 19h-22h (Fermé le midi)<br>
+                        <strong>Dimanche :</strong> 12h-15h<br>
+                        <strong>Lundi :</strong> Fermé</p>
+                    </div>
                 </div>
             </div>
-            <div class="map-container">
+            <div class="map-container reveal">
                 <iframe src="https://maps.google.com/maps?q=7%20Rue%20Auguste%20Cl%C3%A9ment,%2007600%20Vals-les-Bains&t=&z=15&ie=UTF8&iwloc=&output=embed" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
         </div>
@@ -193,14 +230,29 @@
 
     <footer>
         <div class="container">
+            <div class="social-links" style="margin-bottom: 20px; display: flex; justify-content: center; gap: 20px;">
+                <a href="https://www.instagram.com/la_kascade/" target="_blank" class="social-icon" aria-label="Instagram">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
+                </a>
+                <a href="https://www.facebook.com/profile.php?id=61574041990004" target="_blank" class="social-icon" aria-label="Facebook">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+                </a>
+            </div>
             <p>&copy; 2026 La KaScadE - Brasserie Française. Tous droits réservés.</p>
+            <div style="margin-top: 15px; font-size: 0.85rem; display: flex; justify-content: center; gap: 15px; flex-wrap: wrap;">
+                <a href="mentions-legales.html" style="color: rgba(244, 241, 234, 0.6); text-decoration: none;">Mentions légales</a>
+                <a href="politique-confidentialite.html" style="color: rgba(244, 241, 234, 0.6); text-decoration: none;">Données & Cookies</a>
+            </div>
         </div>
     </footer>
 
-<!-- BARRE D'ACTION FLOTTANTE -->
+<!-- BARRE D'ACTION FLOTTANTE PREMIUM -->
     <div class="floating-bar">
+        <div class="status-indicator">
+            <span id="status-dot" class="dot"></span>
+            <span id="status-text" class="status-text">Vérification...</span>
+        </div>
         <a href="#menu" class="float-item">La Carte</a>
-        <!-- <a href="#cadeau" class="float-item">Offrir un repas</a> -->
         <a href="#contact" class="float-item highlight">Réserver</a>
     </div>
 
