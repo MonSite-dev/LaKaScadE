@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Confidentialité | La KaScadE</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&family=Oswald:wght@400;500;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-light">
+    <section class="section container">
+        <h1 class="section-title">Données Personnelles & Cookies</h1>
+        <div class="divider"></div>
+        
+        <div style="color: var(--primary-dark);">
+            <h3>1. Données collectées et finalités</h3>
+            <p>Nous utilisons des outils tiers qui peuvent collecter des données :</p>
+            <ul>
+                <li><strong>Statistiques (Google Analytics) :</strong> Uniquement avec votre consentement, nous collectons des données de navigation anonymisées.</li>
+                <li><strong>Carte (Google Maps) :</strong> L'affichage de la carte implique une connexion aux serveurs de Google (intérêt légitime).</li>
+            </ul>
+
+            <h3>2. Gestion des Cookies</h3>
+            <p>Notre site dépose uniquement les cookies de Google Analytics (`_ga`) si vous les acceptez via notre bandeau. Durée de conservation : 14 mois.</p>
+            <p><button class="btn btn-outline" style="border-color:var(--primary-dark); color:var(--primary-dark); padding: 10px 20px; font-size: 0.9rem;" onclick="localStorage.removeItem('kascade_cookie_consent'); location.reload();">Révoquer mon choix sur les cookies</button></p>
+
+            <h3>3. Vos droits (RGPD)</h3>
+            <p>Vous disposez d'un droit d'accès, de rectification et d'effacement.</p>
+        </div>
+        <a href="index.html" class="btn btn-primary" style="margin-top: 30px;">Retour au site</a>
+    </section>
+</body>
+</html>
