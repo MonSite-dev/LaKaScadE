@@ -360,9 +360,17 @@ html, body {
         height: auto;
         margin-top: 0;
     }
+    
+    /* 1. ON RÉAFFICHE ET ON OPTIMISE L'INDICATEUR D'HEURE */
     .status-indicator { 
-        display: none; 
+        display: flex !important; 
+        padding: 0 8px 0 5px !important; /* Marges réduites */
+        gap: 5px !important;
     }
+    .status-text {
+        font-size: 0.75rem !important; /* Texte affiné pour le mobile */
+    }
+    
     .section-title {
         font-size: 2.2rem !important;
         line-height: 1.2;
@@ -371,32 +379,24 @@ html, body {
     .section {
         padding: 60px 15px !important;
     }
-    .reviews-track .review-card {
-        width: 280px !important; 
-        padding: 20px !important;
-        margin: 0 10px !important;
-        font-size: 0.95rem !important;
-        white-space: normal;
-    }
-    .photos-track img {
-        width: 180px !important;
-        height: 240px !important;
-        margin: 0 8px !important;
-    }
-    .floating-bar {
-        width: max-content !important; 
-        max-width: 90vw !important; 
-        bottom: 20px !important;
-        padding: 6px 12px !important;
-        gap: 15px !important; 
-        justify-content: center !important;
-    }
-    .float-item {
-        font-size: 0.85rem !important;
-        padding: 10px 15px !important;
-    }
-.premium-gallery { grid-template-columns: repeat(2, 1fr); gap: 8px; }
+    
+    /* 2. ON LAISSE LES GRILLES RESPONSIVES */
+    .premium-gallery { grid-template-columns: repeat(2, 1fr); gap: 8px; }
     .item-large, .item-wide { grid-column: span 1; grid-row: span 1; aspect-ratio: 1; }
     .premium-reviews { grid-template-columns: 1fr; gap: 10px; }
     .premium-reviews .review-card { padding: 20px 0; }
+    
+    /* 3. ON ÉLARGIT LA BARRE FLOTTANTE POUR TOUT FAIRE RENTRER */
+    .floating-bar {
+        width: 95vw !important; /* Utilise 95% de la largeur de l'écran */
+        max-width: 420px !important; 
+        bottom: 15px !important;
+        padding: 6px 8px !important;
+        gap: 5px !important; 
+        justify-content: space-between !important; /* Espacement optimal */
+    }
+    .float-item {
+        font-size: 0.8rem !important;
+        padding: 8px 12px !important;
+    }
 }
