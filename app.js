@@ -64,10 +64,16 @@ document.addEventListener("DOMContentLoaded", function() {
                 daysChecked++;
             }
 
-            const dayNames = ["dimanche", "lundi", "mardi", "mercredi", "jeudi", "vendredi", "samedi"];
-            const nextDayName = (nextOpenDay === day) ? "ce soir" : (nextOpenDay === (day + 1) % 7) ? "demain" : dayNames[nextOpenDay];
+            let momentName = "";
+            if (nextOpenDay === day) {
+                momentName = nextOpenTime < 17 ? "ce midi" : "ce soir";
+            } else if (nextOpenDay === (day + 1) % 7) {
+                momentName = "demain";
+            } else {
+                momentName = dayNames[nextOpenDay];
+            }
             
-            text.innerText = `Fermé (Ouvre ${nextDayName} à ${nextOpenTime}h)`;
+            text.innerText = `Fermé (Ouvre ${momentName} à ${nextOpenTime}h)`;
         }
     }
 
