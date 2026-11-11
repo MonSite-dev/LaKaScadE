@@ -25,6 +25,11 @@ document.addEventListener("DOMContentLoaded", function() {
                 5: [{start: 12, end: 15}, {start: 19, end: 22}], // Vendredi
                 6: [{start: 12, end: 15}, {start: 19, end: 22}]  // Samedi
             };
+// --- HORAIRE EXCEPTIONNEL : 11 NOVEMBRE ---
+            if (now.getMonth() === 10 && now.getDate() === 11) {
+                schedule[3] = [{start: 12, end: 15}]; // Mercredi 11 nov : Ouvert UNIQUEMENT le midi
+            }
+            // ------------------------------------------
 
             const todayHours = schedule[day] || [];
             let isOpen = false;
