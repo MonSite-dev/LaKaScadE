@@ -3,7 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>La KaScadE | Brasserie Française</title>
+    <title>La KaScadE | Brasserie Française à Vals-les-Bains (Ardèche)</title>
+    <meta name="description" content="Brasserie française à Vals-les-Bains face à la cascade de la Volane, à deux pas des Thermes et du Casino. Cuisine maison de saison, frites fraîches, terrasse et bons cadeaux.">
+
+    <!-- Aperçu propre sur WhatsApp, Facebook, Messenger -->
+    <meta property="og:type" content="restaurant">
+    <meta property="og:title" content="La KaScadE | Brasserie Française à Vals-les-Bains">
+    <meta property="og:description" content="Cuisine de brasserie française maison, terrasse face à la cascade de la Volane, à deux pas des Thermes de Vals-les-Bains.">
+    <meta property="og:url" content="https://lakascade.fr/">
+    <meta property="og:image" content="https://lakascade.fr/images/histoire.png">
+    <meta property="og:locale" content="fr_FR">
 
     <!-- L'ICÔNE DE L'ONGLET (FAVICON) -->
     <link rel="icon" href="images/favicon.png?v=2" type="image/png">
@@ -22,25 +31,354 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&family=Oswald:wght@400;500;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css?v=3">
+    <link rel="stylesheet" href="style.css?v=5">
+
+</script>
 <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "Restaurant",
-      "name": "La KaScadE",
-      "image": "https://lakascade.fr/images/Logo.png",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "7 Rue Auguste Clément",
-        "addressLocality": "Vals-les-Bains",
-        "postalCode": "07600",
-        "addressCountry": "FR"
+      "@graph": [
+        {
+          "@type": "Restaurant",
+          "@id": "https://lakascade.fr/#restaurant",
+          "name": "La KaScadE",
+          "description": "Brasserie française à Vals-les-Bains en Ardèche, située face à la cascade de la Volane, près du Parc de Vals, des Thermes et du Casino. Cuisine maison généreuse, menus de saison, frites fraîches et terrasse au bord de l'eau.",
+          "url": "https://lakascade.fr/",
+          "image": [
+            "https://lakascade.fr/images/histoire.png",
+            "https://lakascade.fr/images/Logo.png"
+          ],
+          "logo": "https://lakascade.fr/images/Logo.png",
+          "telephone": "+33667271938",
+          "servesCuisine": ["Française", "Brasserie", "Cuisine maison", "Ardéchoise"],
+          "priceRange": "€€",
+          "acceptsReservations": "True",
+          "hasMenu": "https://lakascade.fr/#menu",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "7 Rue Auguste Clément",
+            "addressLocality": "Vals-les-Bains",
+            "addressRegion": "Ardèche",
+            "postalCode": "07600",
+            "addressCountry": "FR"
+          },
+          "areaServed": ["Vals-les-Bains", "Aubenas", "Antraigues-sur-Volane", "Ardèche"],
+          "openingHoursSpecification": [
+            { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Tuesday", "Thursday", "Friday", "Saturday"], "opens": "12:00", "closes": "15:00" },
+            { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"], "opens": "19:00", "closes": "22:00" },
+            { "@type": "OpeningHoursSpecification", "dayOfWeek": "Sunday", "opens": "12:00", "closes": "15:00" }
+          ],
+          "sameAs": [
+            "https://www.instagram.com/la_kascade/",
+            "https://www.facebook.com/profile.php?id=61574041990004"
+          ]
+        },
+        {
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "Où se situe le restaurant La KaScadE à Vals-les-Bains ?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "La KaScadE se trouve au 7 Rue Auguste Clément à Vals-les-Bains (07600), juste en face du Parc de Vals et à quelques minutes à pied des Thermes et du Casino."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Le restaurant dispose-t-il d'une terrasse ?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Oui, La KaScadE dispose d'une terrasse donnant directement sur la rivière La Volane et sa cascade, idéale pour déjeuner au frais ou profiter des beaux jours."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Faut-il réserver une table à La KaScadE ?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "La réservation est vivement conseillée, notamment le week-end, les jours fériés et en saison thermale. Elle se fait directement par téléphone au 06 67 27 19 38."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Quelle cuisine propose La KaScadE ?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "La KaScadE propose une cuisine de brasserie française maison, généreuse et de saison, accompagnée de frites fraîches, de desserts maison et d'une sélection de vins."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Peut-on acheter des bons cadeaux ou commander à emporter ?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Oui, des bons cadeaux personnalisés du montant de votre choix sont disponibles directement au restaurant. Pour les fêtes de fin d'année, nous proposons également du foie gras maison à emporter sur commande (500 g à 55 € et 1 kg à 95 €)."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Quels sont les horaires d'ouverture de La KaScadE ?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Le restaurant est ouvert les mardis, jeudis, vendredis et samedis de 12h à 15h et de 19h à 22h, le mercredi de 19h à 22h (fermé le midi), et le dimanche de 12h à 15h. Fermé le lundi."
+              }
+            }
+          ]
+        }
+      ]
+    }
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Menu",
+      "name": "La Carte — La KaScadE",
+      "url": "https://lakascade.fr/#menu",
+      "inLanguage": "fr",
+      "mainEntityOfPage": {
+        "@id": "https://lakascade.fr/#restaurant"
       },
-      "telephone": "+33667271938",
-      "openingHoursSpecification": [
-        { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Tuesday", "Thursday", "Friday", "Saturday"], "opens": "12:00", "closes": "15:00" },
-        { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"], "opens": "19:00", "closes": "22:00" },
-        { "@type": "OpeningHoursSpecification", "dayOfWeek": "Sunday", "opens": "12:00", "closes": "15:00" }
+      "hasMenuSection": [
+        {
+          "@type": "MenuSection",
+          "name": "Menu de l'Avent",
+          "description": "Menu complet Entrée + Plat + Dessert à 34,00 € (plats aussi disponibles séparément).",
+          "hasMenuItem": [
+            {
+              "@type": "MenuItem",
+              "name": "Menu de l'Avent complet (Entrée + Plat + Dessert)",
+              "description": "Carpaccio de St Jacques et Kaki Persimon, Caille farcie rôtie au four sauce Porto et Foie Gras, Charlotte à la Mousse de Mangue et fruits exotiques.",
+              "offers": { "@type": "Offer", "price": "34.00", "priceCurrency": "EUR" }
+            },
+            {
+              "@type": "MenuItem",
+              "name": "Carpaccio de St Jacques et Kaki Persimon",
+              "description": "Entrée du Menu de l'Avent, vinaigrette de miel au curry.",
+              "offers": { "@type": "Offer", "price": "9.00", "priceCurrency": "EUR" }
+            },
+            {
+              "@type": "MenuItem",
+              "name": "Caille farcie rôtie au four",
+              "description": "Plat du Menu de l'Avent, raisins et nid aux légumes, sauce Porto et foie gras.",
+              "offers": { "@type": "Offer", "price": "20.50", "priceCurrency": "EUR" }
+            },
+            {
+              "@type": "MenuItem",
+              "name": "Charlotte à la mousse de mangue et fruits exotiques",
+              "description": "Dessert du Menu de l'Avent.",
+              "offers": { "@type": "Offer", "price": "6.50", "priceCurrency": "EUR" }
+            }
+          ]
+        },
+        {
+          "@type": "MenuSection",
+          "name": "Les Entrées — Ardoise du Chef",
+          "hasMenuItem": [
+            {
+              "@type": "MenuItem",
+              "name": "Foie gras maison",
+              "description": "Foie gras de canard mi-cuit maison, IGP Sud-Ouest, accompagné de pain noir toasté. Coup de cœur des clients.",
+              "offers": { "@type": "Offer", "price": "9.90", "priceCurrency": "EUR" }
+            },
+            {
+              "@type": "MenuItem",
+              "name": "Cuisses de grenouilles",
+              "description": "Sautées au beurre et persillade fraîche.",
+              "offers": { "@type": "Offer", "price": "9.00", "priceCurrency": "EUR" }
+            },
+            {
+              "@type": "MenuItem",
+              "name": "Escargots",
+              "description": "Au velouté de poitrine fumée, profiterole au lard.",
+              "offers": { "@type": "Offer", "price": "9.00", "priceCurrency": "EUR" }
+            },
+            {
+              "@type": "MenuItem",
+              "name": "Gravlax de truite d'Ardèche",
+              "description": "Blinis maison de pois chiches, pointe de chantilly au guacamole.",
+              "offers": { "@type": "Offer", "price": "7.40", "priceCurrency": "EUR" }
+            },
+            {
+              "@type": "MenuItem",
+              "name": "Camembert rôti au Calvados",
+              "description": "Camembert 120 g rôti au four, coulant et parfumé au Calvados.",
+              "offers": { "@type": "Offer", "price": "8.20", "priceCurrency": "EUR" }
+            },
+            {
+              "@type": "MenuItem",
+              "name": "Soupe du moment",
+              "description": "Selon l'ardoise du chef."
+            }
+          ]
+        },
+        {
+          "@type": "MenuSection",
+          "name": "Les Plats — Ardoise du Chef",
+          "description": "Viandes 100 % origine France. Garniture au choix (frites ou légumes de saison) incluse avec les viandes et la truite. Sauces maison (moutarde, poivre, au bleu, aux champignons) : 2,00 €. Supplément garniture : 3,50 €.",
+          "hasMenuItem": [
+            {
+              "@type": "MenuItem",
+              "name": "Basse côte maturée 1 mois (250 g)",
+              "description": "Pièce de bœuf du Plateau Ardéchois, grillée à la plancha.",
+              "offers": { "@type": "Offer", "price": "26.00", "priceCurrency": "EUR" }
+            },
+            {
+              "@type": "MenuItem",
+              "name": "Basse côte maturée 1 mois (500 g)",
+              "description": "Pièce de bœuf du Plateau Ardéchois, grillée à la plancha. Coup de cœur des clients.",
+              "offers": { "@type": "Offer", "price": "42.00", "priceCurrency": "EUR" }
+            },
+            {
+              "@type": "MenuItem",
+              "name": "Truite d'Ardèche aux amandes",
+              "description": "Truite entière d'Ardèche grillée au four, beurre clarifié et amandes torréfiées. Coup de cœur des clients.",
+              "offers": { "@type": "Offer", "price": "23.00", "priceCurrency": "EUR" }
+            },
+            {
+              "@type": "MenuItem",
+              "name": "Magret de canard IGP Sud-Ouest",
+              "description": "Magret snacké rosé, nappé d'une sauce au poivre du Cambodge.",
+              "offers": { "@type": "Offer", "price": "21.50", "priceCurrency": "EUR" }
+            },
+            {
+              "@type": "MenuItem",
+              "name": "Jarret d'agneau confit",
+              "description": "Souricette fondante sur galette, crème d'ail au thym.",
+              "offers": { "@type": "Offer", "price": "23.20", "priceCurrency": "EUR" }
+            },
+            {
+              "@type": "MenuItem",
+              "name": "Choucroute tradition",
+              "description": "Chou au vin blanc, saucisse fumée, poitrine fumée, knacki artisanales.",
+              "offers": { "@type": "Offer", "price": "21.50", "priceCurrency": "EUR" }
+            },
+            {
+              "@type": "MenuItem",
+              "name": "Andouillette au four",
+              "description": "Véritable andouillette à la fraise de veau, gratinée à la moutarde.",
+              "offers": { "@type": "Offer", "price": "18.50", "priceCurrency": "EUR" }
+            },
+            {
+              "@type": "MenuItem",
+              "name": "Longe de thon sauce au poivre",
+              "description": "Accompagnée d'un méli-mélo de légumes grillés.",
+              "offers": { "@type": "Offer", "price": "19.50", "priceCurrency": "EUR" }
+            }
+          ]
+        },
+        {
+          "@type": "MenuSection",
+          "name": "Les Desserts & Glaces Terre Adélice (Ardèche)",
+          "hasMenuItem": [
+            {
+              "@type": "MenuItem",
+              "name": "Castagnou maison",
+              "description": "Biscuit sablé, frangipane et crème de marrons, dacquoise.",
+              "offers": { "@type": "Offer", "price": "8.00", "priceCurrency": "EUR" }
+            },
+            {
+              "@type": "MenuItem",
+              "name": "Tiramisu au café",
+              "description": "Biscuit imbibé d'un expresso, crème mascarpone.",
+              "offers": { "@type": "Offer", "price": "6.50", "priceCurrency": "EUR" }
+            },
+            {
+              "@type": "MenuItem",
+              "name": "Dôme de mousse chocolatée",
+              "description": "Sur palet breton maison.",
+              "offers": { "@type": "Offer", "price": "7.50", "priceCurrency": "EUR" }
+            },
+            {
+              "@type": "MenuItem",
+              "name": "Chausson aux pommes caramélisées",
+              "description": "Feuilletage doré au four, pommes fondantes caramélisées.",
+              "offers": { "@type": "Offer", "price": "7.00", "priceCurrency": "EUR" }
+            },
+            {
+              "@type": "MenuItem",
+              "name": "Crème brûlée à la vanille de Guadeloupe",
+              "description": "Crème à la vanille, fine coque de sucre roux caramélisée à la flamme.",
+              "offers": { "@type": "Offer", "price": "7.50", "priceCurrency": "EUR" }
+            },
+            {
+              "@type": "MenuItem",
+              "name": "Assiette de 3 fromages",
+              "description": "Fromages de nos régions.",
+              "offers": { "@type": "Offer", "price": "8.00", "priceCurrency": "EUR" }
+            },
+            {
+              "@type": "MenuItem",
+              "name": "Café gourmand",
+              "description": "Expresso accompagné de mignardises maison. Coup de cœur des clients.",
+              "offers": { "@type": "Offer", "price": "9.00", "priceCurrency": "EUR" }
+            },
+            {
+              "@type": "MenuItem",
+              "name": "Irish Coffee gourmand",
+              "description": "Café chaud au whisky accompagné de mignardises maison. Coup de cœur des clients.",
+              "offers": { "@type": "Offer", "price": "12.00", "priceCurrency": "EUR" }
+            },
+            {
+              "@type": "MenuItem",
+              "name": "Glaces artisanales Terre Adélice (Ardèche)",
+              "description": "1 boule 3,30 €, 2 boules 6,00 €, 3 boules 8,50 € (supplément chantilly ou coulis 1,50 €). Parfums : Café, Châtaigne, Chocolat noir Morin, Citron, Lait de brebis aux marrons confits, Menthe feuilles, Myrtilles, Noisette, Vanille, Verveine.",
+              "offers": { "@type": "Offer", "price": "3.30", "priceCurrency": "EUR" }
+            },
+            {
+              "@type": "MenuItem",
+              "name": "Coupe L'Ardéchoise",
+              "description": "1 boule vanille, 1 boule châtaigne, crème de marron, chantilly.",
+              "offers": { "@type": "Offer", "price": "9.00", "priceCurrency": "EUR" }
+            },
+            {
+              "@type": "MenuItem",
+              "name": "Coupe Café Valsois",
+              "description": "1 boule café, 1 boule lait de brebis/marrons, 2 cl Kahlua, chantilly.",
+              "offers": { "@type": "Offer", "price": "9.00", "priceCurrency": "EUR" }
+            },
+            {
+              "@type": "MenuItem",
+              "name": "Coupe Montivernoux",
+              "description": "1 boule myrtille, 1 boule châtaigne, 2 cl Élixir Coiron.",
+              "offers": { "@type": "Offer", "price": "9.00", "priceCurrency": "EUR" }
+            },
+            {
+              "@type": "MenuItem",
+              "name": "Coupe Colonel",
+              "description": "2 boules citron, 2 cl vodka, citron fruit.",
+              "offers": { "@type": "Offer", "price": "9.00", "priceCurrency": "EUR" }
+            }
+          ]
+        },
+        {
+          "@type": "MenuSection",
+          "name": "Cave à vin — Sélection de vignerons et terroirs d'Ardèche",
+          "hasMenuItem": [
+            { "@type": "MenuItem", "name": "Chassenay - Brut 1ère Cuvée (75 cl)", "offers": { "@type": "Offer", "price": "45.00", "priceCurrency": "EUR" } },
+            { "@type": "MenuItem", "name": "Canard-Duchêne - Brut (75 cl)", "offers": { "@type": "Offer", "price": "55.00", "priceCurrency": "EUR" } },
+            { "@type": "MenuItem", "name": "Chassenay - Blanc de Blancs (75 cl)", "offers": { "@type": "Offer", "price": "65.00", "priceCurrency": "EUR" } },
+            { "@type": "MenuItem", "name": "Prosecco (75 cl)", "offers": { "@type": "Offer", "price": "23.00", "priceCurrency": "EUR" } },
+            { "@type": "MenuItem", "name": "Vigier - Chardonnay (Blanc IGP Ardèche, 50 cl)", "offers": { "@type": "Offer", "price": "14.50", "priceCurrency": "EUR" } },
+            { "@type": "MenuItem", "name": "Latour - Chardonnay (Blanc IGP Ardèche, 75 cl)", "offers": { "@type": "Offer", "price": "25.00", "priceCurrency": "EUR" } },
+            { "@type": "MenuItem", "name": "Grangeon - Sauvignon (Blanc IGP Ardèche, 75 cl)", "offers": { "@type": "Offer", "price": "21.50", "priceCurrency": "EUR" } },
+            { "@type": "MenuItem", "name": "Gros Manseng - Moelleux (Blanc IGP Côtes de Gascogne, 75 cl)", "offers": { "@type": "Offer", "price": "25.00", "priceCurrency": "EUR" } },
+            { "@type": "MenuItem", "name": "Vigier - Gris de Grenache (Rosé IGP Ardèche, 50 cl)", "offers": { "@type": "Offer", "price": "14.50", "priceCurrency": "EUR" } },
+            { "@type": "MenuItem", "name": "Domaine Les Terriers (Rosé IGP Ardèche, 75 cl)", "offers": { "@type": "Offer", "price": "23.00", "priceCurrency": "EUR" } },
+            { "@type": "MenuItem", "name": "Isula Bio (Rosé AOP Corse, 75 cl)", "offers": { "@type": "Offer", "price": "21.50", "priceCurrency": "EUR" } },
+            { "@type": "MenuItem", "name": "Domaine du Colombier (Rouge IGP Ardèche, 50 cl)", "offers": { "@type": "Offer", "price": "16.50", "priceCurrency": "EUR" } },
+            { "@type": "MenuItem", "name": "C. Urios - Château Pépusque (Rouge Minervois, 75 cl)", "offers": { "@type": "Offer", "price": "21.50", "priceCurrency": "EUR" } },
+            { "@type": "MenuItem", "name": "Guigal - Côte-Rôtie Brune et Blonde (Rouge AOC Côte-Rôtie, 75 cl)", "offers": { "@type": "Offer", "price": "79.00", "priceCurrency": "EUR" } },
+            { "@type": "MenuItem", "name": "Jaboulet - Parallèle 45 Bio (Rouge AOP Côtes du Rhône, 75 cl)", "offers": { "@type": "Offer", "price": "24.00", "priceCurrency": "EUR" } },
+            { "@type": "MenuItem", "name": "Domaine des Bosquets - Gigondas (Rouge AOC Gigondas, 75 cl)", "offers": { "@type": "Offer", "price": "36.00", "priceCurrency": "EUR" } },
+            { "@type": "MenuItem", "name": "Domaine Grangeon - Chatus (Rouge IGP Ardèche, 75 cl)", "offers": { "@type": "Offer", "price": "32.90", "priceCurrency": "EUR" } },
+            { "@type": "MenuItem", "name": "Vins au verre (12 cl)", "description": "Caves Vivaraises (Gris de Grenache, Merlot, Chardonnay) 3,50 €, Gros Manseng moelleux 5,50 €, Prosecco 6,00 €, Champagne Chassenay 1ère Cuvée 8,00 €.", "offers": { "@type": "Offer", "price": "3.50", "priceCurrency": "EUR" } }
+          ]
+        },
+        {
+          "@type": "MenuSection",
+          "name": "Boissons, Bières & Eaux de l'Ardèche",
+          "description": "Apéritifs (Ricard, Kir châtaigne/cassis/pêche, Prosecco), bières pression de Provence FADA Blonde et du Moment, bières bouteilles (Duvel, Maredsous, FADA Triple, Desperados, Jupiler sans alcool), eaux d'Ardèche (Aizac, Vals, Ventadour, Reine des Basaltes), digestifs dont Élixir Coiron d'Ardèche, Génépi, Verveine et carte barista."
+        }
       ]
     }
     </script>
@@ -276,6 +614,48 @@
             </div>
             <div class="map-container reveal">
                 <iframe src="https://maps.google.com/maps?q=7%20Rue%20Auguste%20Cl%C3%A9ment,%2007600%20Vals-les-Bains&t=&z=15&ie=UTF8&iwloc=&output=embed" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+    </section>
+
+<!-- QUESTIONS FRÉQUENTES (SEO & IA) -->
+    <section id="faq" class="section bg-dark">
+        <div class="container">
+            <div class="text-center reveal">
+                <h2 class="section-title text-light">Questions fréquentes</h2>
+                <div class="divider center gold"></div>
+            </div>
+
+            <div class="faq-list reveal">
+                <details class="faq-item">
+                    <summary>Où se situe La KaScadE à Vals-les-Bains ?</summary>
+                    <p>Nous sommes situés au <strong>7 Rue Auguste Clément, 07600 Vals-les-Bains</strong>, juste en face du Parc de Vals et à quelques minutes à pied des Thermes et du Casino.</p>
+                </details>
+
+                <details class="faq-item">
+                    <summary>Avez-vous une terrasse au bord de l'eau ?</summary>
+                    <p>Oui, notre terrasse donne directement sur la rivière La Volane et sa cascade. C'est un vrai coin de fraîcheur pour déjeuner ou dîner dès les beaux jours.</p>
+                </details>
+
+                <details class="faq-item">
+                    <summary>Comment réserver une table ?</summary>
+                    <p>Les réservations se font directement par téléphone au <a href="tel:+33667271938">06 67 27 19 38</a>. C'est particulièrement conseillé le week-end et pendant la saison thermale.</p>
+                </details>
+
+                <details class="faq-item">
+                    <summary>Quel style de cuisine proposez-vous ?</summary>
+                    <p>Une cuisine de brasserie française généreuse, faite maison et renouvelée au fil des saisons, avec des frites fraîches, des desserts maison et une belle sélection de vins.</p>
+                </details>
+
+                <details class="faq-item">
+                    <summary>Proposez-vous des bons cadeaux ou des commandes à emporter ?</summary>
+                    <p>Oui, nous préparons des bons cadeaux personnalisés du montant de votre choix, à retirer sur place. Pour les fêtes, notre foie gras maison est également disponible sur commande en 500 g (55 €) ou 1 kg (95 €).</p>
+                </details>
+
+                <details class="faq-item">
+                    <summary>Quels sont vos jours et horaires d'ouverture ?</summary>
+                    <p>Ouvert mardi, jeudi, vendredi et samedi (12h-15h et 19h-22h), mercredi soir (19h-22h) et dimanche midi (12h-15h). Fermé le lundi et le mercredi midi.</p>
+                </details>
             </div>
         </div>
     </section>
