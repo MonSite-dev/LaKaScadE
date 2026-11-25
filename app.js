@@ -159,4 +159,35 @@ document.addEventListener("DOMContentLoaded", function() {
     } catch (e) {
         console.error("Erreur cookies :", e);
     }
+// 6. MENU RAPIDE (3 POINTS EN HAUT À DROITE)
+    try {
+        const navBtn = document.getElementById('quick-nav-btn');
+        const navMenu = document.getElementById('quick-nav-menu');
+
+        if (navBtn && navMenu) {
+            navBtn.addEventListener('click', (e) => {
+                e.stopPropagation();
+                const isOpen = navMenu.classList.toggle('open');
+                navBtn.setAttribute('aria-expanded', isOpen);
+            });
+
+            // Refermer dès qu'on choisit une rubrique
+            navMenu.querySelectorAll('a').forEach(link => {
+                link.addEventListener('click', () => {
+                    navMenu.classList.remove('open');
+                    navBtn.setAttribute('aria-expanded', 'false');
+                });
+            });
+
+            // Refermer si on touche ailleurs sur l'écran
+            document.addEventListener('click', (e) => {
+                if (!navMenu.contains(e.target) && !navBtn.contains(e.target)) {
+                    navMenu.classList.remove('open');
+                    navBtn.setAttribute('aria-expanded', 'false');
+                }
+            });
+        }
+    } catch (e) {
+        console.error("Erreur menu rapide :", e);
+    }
 });
