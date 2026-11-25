@@ -31,7 +31,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&family=Oswald:wght@400;500;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css?v=5">
+    <link rel="stylesheet" href="style.css?v=6">
 
 </script>
 <script type="application/ld+json">
@@ -407,6 +407,8 @@
             <a href="#galerie">Notre Cuisine</a>
             <a href="#avis">Avis clients</a>
             <a href="#contact">Infos & Accès</a>
+<a href="que-faire-vals-les-bains.html">Que faire à Vals ?</a>
+         <a href="#faq">Questions fréquentes</a>
         </div>
     </nav>
 
@@ -528,56 +530,29 @@
         </div>
     </section>
 
-    <!-- SECTION AUTOUR DE LA BRASSERIE -->
-    <section id="autour" class="section bg-light">
-        <div class="container text-center">
-            <h2 class="section-title">Autour de La KaScadE</h2>
-            <div class="divider center"></div>
-            <p style="max-width: 700px; margin: 0 auto;">Profitez de votre venue pour découvrir Vals-les-Bains. Prolongez votre moment de détente aux Thermes, tentez votre chance au Casino, ou flânez dans le parc ombragé à quelques pas de notre terrasse.</p>
-        </div>
-    </section>
+    <!-- LE CARNET DE VALS (GUIDES LOCAUX) -->
+ <section id="autour" class="section bg-light">
+     <div class="container text-center reveal">
+         <h2 class="section-title">Autour de La KaScadE</h2>
+         <div class="divider center"></div>
+         <p style="max-width: 680px; margin: 0 auto;">Nos idées concrètes pour profiter de Vals-les-Bains et de la vallée de la Volane avant ou après votre passage à table.</p>
 
-  <!-- CARTE CADEAU
-    <section id="cadeau" class="section bg-dark">
-        <div class="container text-center text-light">
-            <h2 class="section-title text-light">Offrir un Bon Repas</h2>
-            <div class="divider center gold"></div>
-            <p style="margin-bottom: 30px;">Faites plaisir à vos proches avec une carte cadeau personnalisée.</p>
-            
-            <div data-fs-success hidden style="padding: 20px; border: 1px solid var(--accent-gold); color: var(--accent-gold); border-radius: 8px; margin: 0 auto; max-width: 600px; font-weight: bold; background: rgba(229, 193, 88, 0.1);">
-                Merci ! Votre demande a bien été envoyée. Nous vous recontacterons très vite pour valider ensemble le bon cadeau.
-            </div>
-
-            <form id="cadeau-form" class="cadeau-form" action="https://formspree.io/f/mqpkgpkl" method="POST">
-                
-                <input type="text" name="nom" placeholder="Votre Nom & Prénom *" required oninvalid="this.setCustomValidity('Veuillez renseigner votre nom pour que nous puissions vous identifier.')" oninput="this.setCustomValidity('')" data-fs-field>
-                
-                <input type="email" name="email" placeholder="Votre Email * (pour valider le bon ensemble)" required oninvalid="this.setCustomValidity('Veuillez renseigner une adresse email valide.')" oninput="this.setCustomValidity('')" data-fs-field>
-                
-                <input type="tel" name="telephone" placeholder="Votre Numéro de Téléphone (Optionnel)" data-fs-field>
-                
-                <input type="text" name="destinataire" placeholder="Nom de la ou des personnes à qui est destiné ce bon *" required oninvalid="this.setCustomValidity('Veuillez indiquer le nom du ou des destinataires.')" oninput="this.setCustomValidity('')" data-fs-field>
-                
-                <textarea name="message" rows="5" placeholder="Ex: Bonjour, nous souhaiterions offrir un repas d'une valeur de 90€ à [Noms]... *" required oninvalid="this.setCustomValidity('Veuillez préciser votre demande (montant souhaité, menu...).')" oninput="this.setCustomValidity('')" data-fs-field></textarea>
-                
-                <button type="submit" class="btn btn-primary" data-fs-submit-btn>Envoyer la demande</button>
-                <p style="font-size: 0.8rem; margin-top: 10px; color: rgba(255,255,255,0.5);">* Champs obligatoires</p>
-                
-            </form>
-        </div>
-    </section>
-
-    <script>
-        window.formspree = window.formspree || function () { (formspree.q = formspree.q || []).push(arguments); };
-        formspree('initForm', { formElement: '#cadeau-form', formId: 'mqpkgpkl' });
-    </script>
-    <script src="https://unpkg.com/@formspree/ajax@1" defer></script>
-
-    <script>
-        window.formspree = window.formspree || function () { (formspree.q = formspree.q || []).push(arguments); };
-        formspree('initForm', { formElement: '#cadeau-form', formId: 'mqpkgpkl' });
-    </script>
-    <script src="https://unpkg.com/@formspree/ajax@1" defer></script> -->
+         <div class="guide-grid">
+             <a href="que-faire-vals-les-bains.html" class="guide-card">
+                 <span class="guide-tag">Guide local · 1 journée</span>
+                 <h3>Que faire à Vals-les-Bains en une journée ?</h3>
+                 <p>Parc thermal, source intermittente, Thermes, Casino, échappée vers Antraigues et nos conseils pratiques pour tout faire tranquillement.</p>
+                 <span class="guide-link">Lire le guide →</span>
+             </a>
+<a href="thermes-vals-les-bains.html" class="guide-card">
+                    <span class="guide-tag">Thermes & Détente</span>
+                    <h3>Sortie des Thermes : où déjeuner à deux pas ?</h3>
+                    <p>Nos conseils pratiques autour des Thermes de Vals et du Spa Séquoia Redwood pour prolonger la matinée à table sans reprendre la voiture.</p>
+                    <span class="guide-link">Lire le guide →</span>
+                </a>
+         </div>
+     </div>
+ </section>
 
     <section id="contact" class="section bg-gold">
         <div class="container two-columns">
